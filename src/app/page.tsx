@@ -361,7 +361,7 @@ function Testimonials() {
       <div className="mx-auto max-w-7xl">
         <div className="mx-auto grid max-w-2xl space-x-5 grid-cols-1 lg:mx-0 lg:max-w-none md:grid-cols-2 lg:grid-cols-2">
           <div className="flex flex-col pb-10 sm:pb-16 lg:pb-0 lg:pr-8 xl:pr-20 border border-zinc-700/40 p-6 rounded-2xl">
-            <img className="h-12 self-start" src="https://tailwindui.com/img/logos/tuple-logo-white.svg" alt="" />
+            <img className="h-12 self-start" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/The_Honey_Baked_Ham_Company.svg/1280px-The_Honey_Baked_Ham_Company.svg.png" alt="" />
             <figure className="mt-4 flex flex-auto flex-col justify-between">
               <blockquote className="text-md leading-8 ">
                 <p>
@@ -373,18 +373,18 @@ function Testimonials() {
               <figcaption className="my-4 flex items-center gap-x-6">
                 <img
                   className="h-14 w-14 rounded-full bg-gray-800"
-                  src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                  src="https://media.licdn.com/dms/image/C4E03AQGETvfdjT0yKA/profile-displayphoto-shrink_400_400/0/1516321344230?e=1709769600&v=beta&t=W--t1BMJp9bRpWbj8BFs_kKq3hUcb8Q5mkf1s0qxPwg"
                   alt=""
                 />
                 <div className="text-base">
-                  <div className="font-semibold text-white">Judith Black</div>
-                  <div className="mt-1 text-gray-400">CEO of Tuple</div>
+                  <div className="font-semibold text-white">Bill Bolton</div>
+                  <div className="mt-1 text-gray-400">CIO of Honeybaked Ham</div>
                 </div>
               </figcaption>
             </figure>
           </div>
           <div className="flex flex-col pb-10 sm:pb-16 lg:pb-0 lg:pr-8 xl:pr-20 border border-zinc-700/40 p-6 rounded-2xl">
-            <img className="h-12 self-start" src="https://tailwindui.com/img/logos/tuple-logo-white.svg" alt="" />
+            <img className="h-12 w-48 self-start" src="https://upload.wikimedia.org/wikipedia/commons/6/62/Tesla_Motors_Logo.svg" alt="" />
             <figure className="my-4 flex flex-auto flex-col justify-between">
               <blockquote className="text-md leading-8 ">
                 <p>
@@ -396,12 +396,12 @@ function Testimonials() {
               <figcaption className="mt-4 flex items-center gap-x-6">
                 <img
                   className="h-14 w-14 rounded-full bg-gray-800"
-                  src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                  src="https://media.licdn.com/dms/image/C4E03AQEgeqX8vitWcg/profile-displayphoto-shrink_400_400/0/1556658590543?e=1709769600&v=beta&t=hZXdchDoFzeS-kSCIZFJykdFNkwMqp9l5KJ1iSSMWSw"
                   alt=""
                 />
                 <div className="text-base">
-                  <div className="font-semibold text-white">Judith Black</div>
-                  <div className="mt-1 text-gray-400">CEO of Tuple</div>
+                  <div className="font-semibold text-white">Ismail Guneydas</div>
+                  <div className="mt-1 text-gray-400">Head of Cybersecurity at Tesla</div>
                 </div>
               </figcaption>
             </figure>

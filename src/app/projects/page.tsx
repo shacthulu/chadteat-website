@@ -13,39 +13,40 @@ const projects = [
   {
     name: 'Hewlett-Packard',
     description:
-      'Creating technology to empower civilians to explore space on their own terms.',
-    link: { href: 'http://planetaria.tech', label: 'planetaria.tech' },
-    logo: logoPlanetaria,
+      'Innovative solutions in computing and printing technology, focusing on consumer and business needs.',
+    link: { href: 'https://www.hp.com', label: 'hp.com' },
+    logo: logoAnimaginary,
   },
   {
     name: 'Kimberly-Clark',
     description:
-      'High performance web animation library, hand-written in optimized WASM.',
-    link: { href: '#', label: 'github.com' },
-    logo: logoAnimaginary,
+      'Leading manufacturer of personal care and hygiene products, improving the health and hygiene of people around the globe.',
+    link: { href: 'https://www.kimberly-clark.com', label: 'kimberly-clark.com' },
+    logo: logoCosmos,
   },
   {
     name: 'Floor and Decor',
     description:
-      'Real-time video streaming library, optimized for interstellar transmission.',
-    link: { href: '#', label: 'github.com' },
+      'Specializing in a wide range of flooring options, from tiles to wood, catering to both home renovation and commercial design needs.',
+    link: { href: 'https://www.flooranddecor.com', label: 'flooranddecor.com' },
     logo: logoHelioStream,
   },
   {
     name: 'Defense Logistics Agency',
     description:
-      'The operating system that powers our Planetaria space shuttles.',
-    link: { href: '#', label: 'github.com' },
-    logo: logoCosmos,
+      'Provides logistics, acquisition, and technical services for the U.S. military and other federal agencies, ensuring the nation\'s defense readiness.',
+    link: { href: 'https://www.dla.mil', label: 'dla.mil' },
+    logo: logoOpenShuttle,
   },
   {
     name: 'Home Depot',
     description:
-      'The schematics for the first rocket I designed that successfully made it to orbit.',
-    link: { href: '#', label: 'github.com' },
-    logo: logoOpenShuttle,
+      'Largest home improvement retailer offering tools, construction products, and services for DIY enthusiasts and professional contractors.',
+    link: { href: 'https://www.homedepot.com', label: 'homedepot.com' },
+    logo: logoPlanetaria,
   },
 ]
+
 
 function LinkIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   return (
@@ -66,8 +67,8 @@ export const metadata: Metadata = {
 export default function Projects() {
   return (
     <SimpleLayout
-      title="Things I’ve made trying to put my dent in the universe."
-      intro="I’ve worked on tons of little projects over the years but these are the ones that I’m most proud of. Many of them are open-source, so if you see something that piques your interest, check out the code and contribute if you have ideas for how it can be improved."
+      title="Amazing organizations and projects I'm a part of."
+      intro="I've worked with some amazing projects over the years and I'm thrilled for you to see the short list of projects I've founded, or play a role in."
     >
       <ul
         role="list"

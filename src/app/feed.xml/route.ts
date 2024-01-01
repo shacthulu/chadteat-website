@@ -10,13 +10,13 @@ export async function GET(req: Request) {
   }
 
   let author = {
-    name: 'Spencer Sharp',
-    email: 'spencer@planetaria.tech',
+    name: 'Chad Teat',
+    email: 'chad@chadteat.com',
   }
 
   let feed = new Feed({
     title: author.name,
-    description: 'Your blog description',
+    description: 'Comprehensive updates of articles and projects from Chad Teat',
     author,
     id: siteUrl,
     link: siteUrl,
