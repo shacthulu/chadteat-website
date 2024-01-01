@@ -1,11 +1,11 @@
 import { ArticleLayout } from '@/components/ArticleLayout'
 
 export const article = {
-  author: 'Adam Wathan',
-  date: '2021-09-19',
-  title: 'Lorem markdownum, bracchia in redibam! Terque unda puppi nec, .',
+  author: 'Chad Teat',
+  date: '2021-09-17',
+  title: 'Initial Commit',
   description:
-    'linguae posterior in utraque respicere candidus Mimasque formae; quae conantem cervice. Parcite variatus, redolentia adeunt. Tyrioque dies, naufraga sua adit partibus celanda torquere temptata, erit maneat et ramos, iam ait dominari potitus! Tibi litora matremque fumantia condi radicibus opusque.',
+    'Time to kick things off!.',
 }
 
 export const metadata = {
@@ -15,23 +15,26 @@ export const metadata = {
 
 export default (props) => <ArticleLayout article={article} {...props} />
 
-When we released the first version of cosmOS last year, it was written in Go. Go is a wonderful programming language with a lot of benefits, but it’s been a while since I’ve seen an article on the front page of Hacker News about rewriting some important tool in Go and I see articles on there about rewriting things in Rust every single week.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Sed euismod, justo in ultrices dapibus, ante metus venenatis mi, vel placerat odio justo eget ante. Nunc malesuada tristique eros, vel sodales libero bibendum ac. Vivamus vitae libero in massa varius fringilla. Etiam nec metus euismod, fringilla sapien eu, laoreet libero. Suspendisse potenti. Sed condimentum, quam ac dictum finibus, elit justo lacinia nisl, eu bibendum velit nunc ut urna. Integer ac euismod massa. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed vitae purus vitae nunc hendrerit ultrices ut nec justo. Curabitur posuere lorem a justo eleifend, in vestibulum quam lobortis. Sed nec orci vel tortor malesuada iaculis vel in justo. Vivamus eu sapien massa. Donec quis tincidunt libero. Vivamus volutpat vitae nulla id tincidunt. Nulla facilisi. Proin dapibus, nisi eu varius bibendum, tortor tortor hendrerit odio, a dapibus libero sem sit amet nunc. In hac habitasse platea dictumst.
 
-```rust
-use ferris_says::say;
-use std::io::{stdout, BufWriter};
+```js
+import { animate } from '@planetaria/animaginary'
 
-fn main() {
-    let stdout = stdout();
-    let message = String::from("Hello fellow hackers");
-    let width = message.chars().count();
-
-    let mut writer = BufWriter::new(stdout.lock());
-    say(message.as_bytes(), width, &mut writer).unwrap();
+export function MyComponent({ open, children }) {
+  return (
+    <animate.div
+      in={open}
+      animateFrom="opacity-0 scale-95"
+      animateTo="opacity-100 scale-100"
+      duration={350}
+    >
+      {children}
+    </animate.div>
+  )
 }
 ```
 
-I derive a large amount of my self-worth from whether or not Hacker News is impressed with the work I'm doing, so when I realized this, I cancelled all of our existing projects and started migrating everything to Rust immediately.
+Animaginary is our new web animation library that redefines what you thought was possible on the web. Hand-written in optimized WASM, Animaginary can even animate the `height` property of an element at 60fps.
 
 ## Sermone fata
 

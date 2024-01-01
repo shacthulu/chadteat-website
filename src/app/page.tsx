@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import Image, { type ImageProps } from 'next/image'
 import Link from 'next/link'
 import clsx from 'clsx'
@@ -187,8 +188,8 @@ function Role({ role }: { role: Role }) {
 function Resume() {
   let resume: Array<Role> = [
     {
-      company: 'Planetaria',
-      title: 'CEO',
+      company: 'Hewlett Packard Enterprise',
+      title: 'Architecture and Advisory',
       logo: logoPlanetaria,
       start: '2019',
       end: {
@@ -197,22 +198,22 @@ function Resume() {
       },
     },
     {
-      company: 'Airbnb',
-      title: 'Product Designer',
+      company: 'Kimberly Clark',
+      title: 'Director of Security and Deputy CISO',
       logo: logoAirbnb,
       start: '2014',
       end: '2019',
     },
     {
-      company: 'Facebook',
-      title: 'iOS Software Engineer',
+      company: 'Home Depot',
+      title: 'Security Engineer',
       logo: logoFacebook,
       start: '2011',
       end: '2014',
     },
     {
-      company: 'Starbucks',
-      title: 'Shift Supervisor',
+      company: 'Floor and Decor',
+      title: 'CISO',
       logo: logoStarbucks,
       start: '2008',
       end: '2011',
@@ -301,8 +302,10 @@ export default async function Home() {
           </div>
         </div>
       </Container>
-      <Photos />
-      <Container className="mt-24 md:mt-28">
+      <Container>
+      <Testimonials />
+      </Container>
+      <Container className="mt-12 md:mt-12">
         <div className="mx-auto grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2">
           <div className="flex flex-col gap-16">
             {articles.map((article) => (
@@ -316,5 +319,95 @@ export default async function Home() {
         </div>
       </Container>
     </>
+  )
+}
+
+function Testimonial() {
+  return (
+    <section className="relative isolate overflow-hidden px-6 py-12 sm:py-8 lg:px-8">
+      <div className="mx-auto max-w-2xl lg:max-w-4xl">
+        <img className="mx-auto h-12" src="https://tailwindui.com/img/logos/workcation-logo-indigo-600.svg" alt="" />
+        <figure className="mt-10">
+          <blockquote className="text-center text-xl font-semibold leading-8 text-gray-100 sm:text-xl sm:leading-9">
+            <p>
+              “Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo expedita voluptas culpa sapiente alias
+              molestiae. Numquam corrupti in laborum sed rerum et corporis.”
+            </p>
+          </blockquote>
+          <figcaption className="mt-10">
+            <img
+              className="mx-auto h-10 w-10 rounded-full"
+              src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+              alt=""
+            />
+            <div className="mt-4 flex items-center justify-center space-x-3 text-base">
+              <div className="font-semibold text-gray-900">Judith Black</div>
+              <svg viewBox="0 0 2 2" width={3} height={3} aria-hidden="true" className="fill-gray-900">
+                <circle cx={1} cy={1} r={1} />
+              </svg>
+              <div className="text-gray-600">Head of Manufacturing Security</div>
+            </div>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+  )
+}
+
+
+function Testimonials() {
+  return (
+    <section className="py-8 sm:py-8">
+      <div className="mx-auto max-w-7xl">
+        <div className="mx-auto grid max-w-2xl space-x-5 grid-cols-1 lg:mx-0 lg:max-w-none md:grid-cols-2 lg:grid-cols-2">
+          <div className="flex flex-col pb-10 sm:pb-16 lg:pb-0 lg:pr-8 xl:pr-20 border border-zinc-700/40 p-6 rounded-2xl">
+            <img className="h-12 self-start" src="https://tailwindui.com/img/logos/tuple-logo-white.svg" alt="" />
+            <figure className="mt-4 flex flex-auto flex-col justify-between">
+              <blockquote className="text-md leading-8 ">
+                <p>
+                  “Amet amet eget scelerisque tellus sit neque faucibus non eleifend. Integer eu praesent at a. Ornare
+                  arcu gravida natoque erat et cursus tortor consequat at. Vulputate gravida sociis enim nullam
+                  ultricies habitant malesuada lorem ac. Tincidunt urna dui pellentesque sagittis.”
+                </p>
+              </blockquote>
+              <figcaption className="my-4 flex items-center gap-x-6">
+                <img
+                  className="h-14 w-14 rounded-full bg-gray-800"
+                  src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                  alt=""
+                />
+                <div className="text-base">
+                  <div className="font-semibold text-white">Judith Black</div>
+                  <div className="mt-1 text-gray-400">CEO of Tuple</div>
+                </div>
+              </figcaption>
+            </figure>
+          </div>
+          <div className="flex flex-col pb-10 sm:pb-16 lg:pb-0 lg:pr-8 xl:pr-20 border border-zinc-700/40 p-6 rounded-2xl">
+            <img className="h-12 self-start" src="https://tailwindui.com/img/logos/tuple-logo-white.svg" alt="" />
+            <figure className="my-4 flex flex-auto flex-col justify-between">
+              <blockquote className="text-md leading-8 ">
+                <p>
+                  “Amet amet eget scelerisque tellus sit neque faucibus non eleifend. Integer eu praesent at a. Ornare
+                  arcu gravida natoque erat et cursus tortor consequat at. Vulputate gravida sociis enim nullam
+                  ultricies habitant malesuada lorem ac. Tincidunt urna dui pellentesque sagittis.”
+                </p>
+              </blockquote>
+              <figcaption className="mt-4 flex items-center gap-x-6">
+                <img
+                  className="h-14 w-14 rounded-full bg-gray-800"
+                  src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                  alt=""
+                />
+                <div className="text-base">
+                  <div className="font-semibold text-white">Judith Black</div>
+                  <div className="mt-1 text-gray-400">CEO of Tuple</div>
+                </div>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
   )
 }
