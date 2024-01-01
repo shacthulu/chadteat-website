@@ -24,22 +24,9 @@ npm run dev
 
 Finally, open [http://localhost:3000](http://localhost:3000) in your browser to view the website.
 
-## Customizing
-
-You can start editing this template by modifying the files in the `/src` folder. The site will auto-update as you edit these files.
-
 ## License
 
-This site template is a commercial product and is licensed under the [Tailwind UI license](https://tailwindui.com/license).
-
-## Learn more
-
-To learn more about the technologies used in this site template, see the following resources:
-
-- [Tailwind CSS](https://tailwindcss.com/docs) - the official Tailwind CSS documentation
-- [Next.js](https://nextjs.org/docs) - the official Next.js documentation
-- [Headless UI](https://headlessui.dev) - the official Headless UI documentation
-- [MDX](https://mdxjs.com) - the MDX documentation
+Parts of this site are licensed under the [Tailwind UI license](https://tailwindui.com/license).
 
 ## TODO
 
@@ -47,7 +34,7 @@ To learn more about the technologies used in this site template, see the followi
 
 - [] Landing Page -- The pictures are currently links for the testimonials.  They should be in the resources.
 - [] Landing Page -- Update dimensions and formatting for testimonials
-- [] Landing Page -- Decide to use quotes from the hype sheet of GCISO, IQPMC, Gartner, etc
+- [] Landing Page -- Decide to use quotes from the hype sheet of GCISO, IQPMC, Gartner, etc. Maybe replace HBH with TSG CFO
 
 
 ## Thoughs
@@ -61,10 +48,11 @@ To learn more about the technologies used in this site template, see the followi
 "Chad has proven, year over year, to be one of the most influential CISOs in the industry." - Gartner
 
 - About
+  - Headline: You care about your customers and it shows. Let's work together
+  - Executive Summary
   - Acheivements
   - Skills
   - History
-  - Company Portfolio
 - Clients (1 testimonial per)
   - Industry
     - Floor and Decor => CISO, Get a Chuck quote?
