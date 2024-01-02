@@ -18,13 +18,19 @@ import logoPlanetaria from '@/images/logos/planetaria.svg'
 import logoStarbucks from '@/images/logos/starbucks.svg'
 import image1 from '@/images/photos/image-1.jpg'
 import image2 from '@/images/photos/image-2.jpg'
-import image3 from '@/images/photos/image-3.jpg'
+import image3 from "@/images/photos/image-3.jpg"
 import image4 from '@/images/photos/image-4.jpg'
 import image5 from '@/images/photos/image-5.jpg'
 import preso from '@/images/preso.png'
 import image6 from '@/images/preso.png'
 import { type ArticleWithSlug, getAllArticles } from '@/lib/articles'
 import { formatDate } from '@/lib/formatDate'
+
+const intro: String = "Explore this site if you're interested in working with me personally for executive advisory, fractional CISO, CIO, and speaking engagements. Follow me on Twitter, LinkedIN or subscribe to my privacy-respecting email updates if your here for the human-written articles, updates on my upcoming book \"Reasonable Security,\" and thousands of dollars worth of consulting resources I regularly release in various publications."
+
+const heading: String = "CISO, Author, Professor, Entrepreneur."
+
+const numArticlesToShow = 4
 
 function MailIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   return (
@@ -276,10 +282,10 @@ export default async function Home() {
       <Container className="mt-9">
         <div className="max-w-2xl">
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-            CISO, Author, Professor, Entrepreneur.
+            {heading}
           </h1>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            Hello, I&apos;m Chad. If you&apos;re looking for information on companies or projects I&apos;m affiliated with you&apos;ll find them on the Organizations page. Explore this site if you&apos;re interested in working with me personally for executive advisory, fractional CISO, fractional CIO, and speaking engagements. Follow me on Twitter, LinkedIN or subscribe to my privacy-respecting email updates if your here for the human-written articles, updates on my upcoming book &quot;Reasonable Security,&quot; and thousands of dollars worth of consulting resources I regularly release in various publications.</p>
+            {intro}</p>
           <div className="mt-6 flex gap-6">
             <SocialLink
               href="https://twitter.com/shacthulu"
@@ -305,15 +311,16 @@ export default async function Home() {
         </div>
       </Container>
       <Container>
-      {/* <Image src={image6} alt="Presentation" className="w-full" /> */}
+        {/* <Image src={image6} alt="Presentation" className="w-full" /> */}
       </Container>
       <Container className="mt-12 md:mt-12">
         <div className="mx-auto grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2">
           <div className="flex flex-col gap-16">
-            {articles.map((article) => (
+            {articles.slice(0, 3).map((article, idx) => (
               <Article key={article.slug} article={article} />
             ))}
           </div>
+          <Link href={''} className="-my-12 text-sm font-medium text-teal-500 h-5">More...</Link>
           <div className="space-y-10 lg:pl-16 xl:pl-24">
             <Newsletter />
             <Resume />
