@@ -319,10 +319,8 @@ export default async function Home() {
             {articles.slice(0, 3).map((article, idx) => (
               <Article key={article.slug} article={article} />
             ))}
-            {/* <Link href={''} className="text-sm font-medium text-teal-500">More...</Link> */}
           </div>
-          {/* <Link href={''} className="text-sm font-medium text-teal-500">More...</Link> */}
-          <Link href={''} className="text-sm font-medium text-teal-500">More...</Link>
+          <Link href={''} className="-my-12 text-sm font-medium text-teal-500 h-5">More...</Link>
           <div className="space-y-10 lg:pl-16 xl:pl-24">
             <Newsletter />
             <Resume />
