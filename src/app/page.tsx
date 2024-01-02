@@ -279,7 +279,7 @@ export default async function Home() {
             CISO, Author, Professor, Entrepreneur.
           </h1>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            Hello, I&apos;m Chad. If you&apos;re looking for information on companies or projects I&apos;m affiliated with you&apos;ll find them on the Organizations page. Explore this site if you&apos;re interested in working with me personally for executive advisory, fractional CISO, and speaking engagements. Follow me on Twitter, LinkedIN or subscribe to my privacy-respecting email updates if your here for the human-written articles, updates on my upcoming book &quot;Reasonable Security,&quot; and thousands of dollars worth of consulting resources I regularly release in various publications.  Please don&apos;t hesitate to shoot me an email if you&apos;re wanting to chat or grab a drink at one of the major or Georgia-local security conferences.</p>
+            Hello, I&apos;m Chad. If you&apos;re looking for information on companies or projects I&apos;m affiliated with you&apos;ll find them on the Organizations page. Explore this site if you&apos;re interested in working with me personally for executive advisory, fractional CISO, fractional CIO, and speaking engagements. Follow me on Twitter, LinkedIN or subscribe to my privacy-respecting email updates if your here for the human-written articles, updates on my upcoming book &quot;Reasonable Security,&quot; and thousands of dollars worth of consulting resources I regularly release in various publications.</p>
           <div className="mt-6 flex gap-6">
             <SocialLink
               href="https://twitter.com/shacthulu"
