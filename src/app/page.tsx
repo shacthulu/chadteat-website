@@ -12,18 +12,16 @@ import {
   TwitterIcon,
   IconAcm
 } from '@/components/SocialIcons'
-import logoAirbnb from '@/images/logos/airbnb.svg'
-import logoFacebook from '@/images/logos/facebook.svg'
-import logoPlanetaria from '@/images/logos/planetaria.svg'
-import logoStarbucks from '@/images/logos/starbucks.svg'
+import logoUndrawPieGraph from '@/images/logos/undraw_pie_graph_re_fvol.svg'
+import logoUndrawTeaching from '@/images/logos/undraw_teaching_re_g7e3.svg'
+import logoUndrawGroupHangout from '@/images/logos/undraw_group_hangout_re_4t8r.svg'
+import logoUndrawAcceptTasks from '@/images/logos/undraw_accept_tasks_re_09mv.svg'
 import { type ArticleWithSlug, getAllArticles } from '@/lib/articles'
 import { formatDate } from '@/lib/formatDate'
 
-const intro: String = "Explore this site if you're interested in working with me personally for executive advisory, fractional CISO, CIO, and speaking engagements. Follow me on Twitter, LinkedIN or subscribe to my privacy-respecting email updates if your here for the human-written articles, updates on my upcoming book \"Reasonable Security,\" and thousands of dollars worth of consulting resources I regularly release in various publications."
+const intro: String = "Explore this site if you're interested in working with me personally for executive advisory, fractional CISO, CIO, and speaking engagements. Follow me on Twitter, LinkedIN or subscribe to my minimilist email updates if you are here for the articles and thousands of dollars worth of consulting resources I regularly release."
 
-const heading: String = "CISO, Author, Professor, Entrepreneur."
-
-const numArticlesToShow = 4
+const heading: String = "Chad Teat: CISO, Professor, Speaker, Entrepreneur."
 
 function Article( { article }: { article: ArticleWithSlug } ) {
   return (
@@ -82,83 +80,59 @@ function Newsletter() {
   )
 }
 
-interface Role {
-  company: string
-  title: string
+interface Service {
+  service: string
+  subtitle: string
   logo: ImageProps[ 'src' ]
-  start: string | { label: string; dateTime: string }
-  end: string | { label: string; dateTime: string }
 }
 
-function Role( { role }: { role: Role } ) {
-  let startLabel =
-    typeof role.start === 'string' ? role.start : role.start.label
-  let startDate =
-    typeof role.start === 'string' ? role.start : role.start.dateTime
-
-  let endLabel = typeof role.end === 'string' ? role.end : role.end.label
-  let endDate = typeof role.end === 'string' ? role.end : role.end.dateTime
+function Service( { service }: { service: Service } ) {
 
   return (
     <li className="flex gap-4">
-      <div className="relative mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-full shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
-        <Image src={ role.logo } alt="" className="h-7 w-7" unoptimized />
+      <div className="relative mt-1 flex h-13 w-13 flex-none items-center justify-center rounded-lg shadow-md dark:bg-zinc-800 shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:ring-0">
+        <Image src={ service.logo } alt="" className="h-11 w-11" unoptimized />
       </div>
       <dl className="flex flex-auto flex-wrap gap-x-2">
-        <dt className="sr-only">Company</dt>
+        <dt className="sr-only">Service</dt>
         <dd className="w-full flex-none text-sm font-medium text-zinc-900 dark:text-zinc-100">
-          { role.company }
+          { service.service }
         </dd>
-        <dt className="sr-only">Role</dt>
+        <dt className="sr-only">Statistic</dt>
         <dd className="text-xs text-zinc-500 dark:text-zinc-400">
-          { role.title }
-        </dd>
-        <dt className="sr-only">Date</dt>
-        <dd
-          className="ml-auto text-xs text-zinc-400 dark:text-zinc-500"
-          aria-label={ `${ startLabel } until ${ endLabel }` }
-        >
-          <time dateTime={ startDate }>{ startLabel }</time>{ ' ' }
-          <span aria-hidden="true">—</span>{ ' ' }
-          <time dateTime={ endDate }>{ endLabel }</time>
+          { service.subtitle }
         </dd>
       </dl>
     </li>
   )
 }
 
-function Resume() {
-  let resume: Array<Role> = [
+function Services() {
+  let services: Array<Service> = [
+    // {
+    //   service: 'Fractional CISO and CIO',
+    //   subtitle: '13 years CISO and 3 years of CIO experience',
+    //   logo: logoUndrawGroupHangout,
+    // },
     {
-      company: 'Hewlett Packard Enterprise',
-      title: 'Architecture and Advisory',
-      logo: logoPlanetaria,
-      start: '2019',
-      end: {
-        label: 'Present',
-        dateTime: new Date().getFullYear().toString(),
-      },
+      service: 'Fractional CISO and CIO',
+      subtitle: '13 years CISO and 3 years of CIO experience',
+      logo: logoUndrawGroupHangout,
     },
     {
-      company: 'Kimberly Clark',
-      title: 'Director of Security and Deputy CISO',
-      logo: logoAirbnb,
-      start: '2014',
-      end: '2019',
+      service: 'Executive Advisory',
+      subtitle: 'Strategic guidance trusted by 16 organizations',
+      logo: logoUndrawPieGraph,
     },
     {
-      company: 'Home Depot',
-      title: 'Security Engineer',
-      logo: logoFacebook,
-      start: '2011',
-      end: '2014',
+      service: 'Consulting',
+      subtitle: 'Over 100 consulting engagements performed',
+      logo: logoUndrawAcceptTasks,
     },
     {
-      company: 'Floor and Decor',
-      title: 'CISO',
-      logo: logoStarbucks,
-      start: '2008',
-      end: '2011',
+      service: 'Speaker',
+      subtitle: '14 conferences and over 700 students taught',
+      logo: logoUndrawTeaching,
     },
   ]
 
@@ -166,11 +140,11 @@ function Resume() {
     <div className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40">
       <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
         <BriefcaseIcon className="h-6 w-6 flex-none" />
-        <span className="ml-3">Work</span>
+        <span className="ml-3">Services</span>
       </h2>
       <ol className="mt-6 space-y-4">
-        { resume.map( ( role, roleIndex ) => (
-          <Role key={ roleIndex } role={ role } />
+        { services.map( ( service, serviceIndex ) => (
+          <Service key={ serviceIndex } service={ service } />
         ) ) }
       </ol>
       <Button href="#" variant="secondary" className="group mt-6 w-full">
@@ -182,8 +156,7 @@ function Resume() {
 }
 
 export default async function Home() {
-  let articles = ( await getAllArticles() ).slice( 0, 4 )
-
+  let articles = ( await getAllArticles() ).slice( 0, 3 )
   return (
     <>
       <Container className="mt-9">
@@ -220,14 +193,14 @@ export default async function Home() {
       <Container className="mt-12 md:mt-12">
         <div className="mx-auto grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2">
           <div className="flex flex-col gap-16">
-            { articles.slice( 0, numArticlesToShow ).map( ( article ) => (
+            { articles.map( ( article ) => (
               <Article key={ article.slug } article={ article } />
             ) ) }
-            <Link href={ '' } className="-my-12 text-sm font-medium text-teal-500 h-5">More...</Link>
+            <Link href={ '' } className="-my-10 text-sm font-medium text-teal-500 h-5">More...</Link>
           </div>
           <div className="space-y-10 lg:pl-16 xl:pl-24">
             <Newsletter />
-            <Resume />
+            <Services />
           </div>
         </div>
       </Container>
@@ -456,6 +429,105 @@ function ArrowDownIcon( props: React.ComponentPropsWithoutRef<'svg'> ) {
 //           </div>
 //         ) ) }
 //       </div>
+//     </div>
+//   )
+// }
+
+// function Role( { role }: { role: Role } ) {
+//   let startLabel =
+//     typeof role.start === 'string' ? role.start : role.start.label
+//   let startDate =
+//     typeof role.start === 'string' ? role.start : role.start.dateTime
+
+//   let endLabel = typeof role.end === 'string' ? role.end : role.end.label
+//   let endDate = typeof role.end === 'string' ? role.end : role.end.dateTime
+
+//   return (
+//     <li className="flex gap-4">
+//       <div className="relative mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-full shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
+//         <Image src={ role.logo } alt="" className="h-7 w-7" unoptimized />
+//       </div>
+//       <dl className="flex flex-auto flex-wrap gap-x-2">
+//         <dt className="sr-only">Company</dt>
+//         <dd className="w-full flex-none text-sm font-medium text-zinc-900 dark:text-zinc-100">
+//           { role.company }
+//         </dd>
+//         <dt className="sr-only">Role</dt>
+//         <dd className="text-xs text-zinc-500 dark:text-zinc-400">
+//           { role.title }
+//         </dd>
+//         <dt className="sr-only">Date</dt>
+//         <dd
+//           className="ml-auto text-xs text-zinc-400 dark:text-zinc-500"
+//           aria-label={ `${ startLabel } until ${ endLabel }` }
+//         >
+//           <time dateTime={ startDate }>{ startLabel }</time>{ ' ' }
+//           <span aria-hidden="true">—</span>{ ' ' }
+//           <time dateTime={ endDate }>{ endLabel }</time>
+//         </dd>
+//       </dl>
+//     </li>
+//   )
+// }
+
+// interface Role {
+//   company: string
+//   title: string
+//   logo: ImageProps[ 'src' ]
+//   start: string | { label: string; dateTime: string }
+//   end: string | { label: string; dateTime: string }
+// }
+
+// function Resume() {
+//   let resume: Array<Role> = [
+//     {
+//       company: 'Hewlett Packard Enterprise',
+//       title: 'Architecture and Advisory',
+//       logo: logoPlanetaria,
+//       start: '2019',
+//       end: {
+//         label: 'Present',
+//         dateTime: new Date().getFullYear().toString(),
+//       },
+//     },
+//     {
+//       company: 'Kimberly Clark',
+//       title: 'Director of Security and Deputy CISO',
+//       logo: logoAirbnb,
+//       start: '2014',
+//       end: '2019',
+//     },
+//     {
+//       company: 'Home Depot',
+//       title: 'Security Engineer',
+//       logo: logoFacebook,
+//       start: '2011',
+//       end: '2014',
+//     },
+//     {
+//       company: 'Floor and Decor',
+//       title: 'CISO',
+//       logo: logoStarbucks,
+//       start: '2008',
+//       end: '2011',
+//     },
+//   ]
+
+//   return (
+//     <div className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40">
+//       <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
+//         <BriefcaseIcon className="h-6 w-6 flex-none" />
+//         <span className="ml-3">Work</span>
+//       </h2>
+//       <ol className="mt-6 space-y-4">
+//         { resume.map( ( role, roleIndex ) => (
+//           <Role key={ roleIndex } role={ role } />
+//         ) ) }
+//       </ol>
+//       <Button href="#" variant="secondary" className="group mt-6 w-full">
+//         Download CV
+//         <ArrowDownIcon className="h-4 w-4 stroke-zinc-400 transition group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" />
+//       </Button>
 //     </div>
 //   )
 // }

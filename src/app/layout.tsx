@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   title: {
     template: '%s - Chad Teat',
     default:
-      'Chad Teat - CISO, Author, Professor, Entrepreneur.',
+      'Chad Teat - CISO, Professor, Speaker, Entrepreneur.',
   },
   description:
     'I’m Chad, a security leader in the Greater Atlanta Area. I’m the founder of Bitfire Security, and enthusiastic advisory partner of many amazing businesses.',

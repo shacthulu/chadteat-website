@@ -46,9 +46,13 @@ Parts of this site are licensed under the [Tailwind UI license](https://tailwind
   - Owner partner Bitfire, Red Constellation
   - 
 "Chad has proven, year over year, to be one of the most influential CISOs in the industry." - Gartner
+- At a Glance Card
+  - 17 speeches given - CIO Magazine Conference, Gartner Global Executive 
+  - 9 years CISO and vCISO work - 
+  - Gartner Top 3 Influential CISOs - Thought leadership and contributing to the community.
+  - 8 billion students taught - Advanced programming, cybersecurity, and Healthcare IT at Kennesaw State
 
 - About
-  - Headline: You care about your customers and it shows. Let's work together
   - Executive Summary
   - Acheivements
   - Skills
@@ -68,6 +72,7 @@ Parts of this site are licensed under the [Tailwind UI license](https://tailwind
   - Mentoring and Advisory
 - Blog
 - Services
+- Headline: You care about your customers and it shows. Let's work together
   - Chad
     - Advisory
     - Fractional CISO
