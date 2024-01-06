@@ -148,6 +148,27 @@ const clientCompanies = [
     link: { href: 'https://www.homedepot.com', label: 'homedepot.com', icon: 'external' },
     logo: logoPlanetaria,
   },
+  {
+    name: 'General Services Administration (GSA)',
+    description:
+      'Architecture and Engineering',
+    link: { href: 'https://www.homedepot.com', label: 'homedepot.com', icon: 'external' },
+    logo: logoPlanetaria,
+  },
+  {
+    name: 'Immigration and Customs Enforcement (ICE)',
+    description:
+      'Architecture and Engineering',
+    link: { href: 'https://www.homedepot.com', label: 'homedepot.com', icon: 'external' },
+    logo: logoPlanetaria,
+  },
+  {
+    name: 'Defense Information Security Agency (DISA)',
+    description:
+      'Policy and Strategy',
+    link: { href: 'https://www.homedepot.com', label: 'homedepot.com', icon: 'external' },
+    logo: logoPlanetaria,
+  },
 ]
 
 const mentorCompanies = [
@@ -272,8 +293,8 @@ export const metadata = {
 export default function Uses() {
   return (
 <SimpleLayout
-  title="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-  intro="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+  title="Great companies I've worked with"
+  intro="You should expect your partners to know the industry as a practitioner, not just a consultant.  My industry experience is listed first as, in those organizations, I sat in your seat, working for the company.  You'll then find the amazing companies I've worked with as a consultant and advisor (many are omitted due to NDA)."
 >
   <div className="space-y-20">
     <ToolsSection title="Industry Roles">
