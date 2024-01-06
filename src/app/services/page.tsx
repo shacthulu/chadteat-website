@@ -3,10 +3,6 @@ import Image from 'next/image'
 
 import { Card } from '@/components/Card'
 import { SimpleLayout } from '@/components/SimpleLayout'
-import logoAnimaginary from '@/images/logos/animaginary.svg'
-import logoCosmos from '@/images/logos/cosmos.svg'
-import logoHelioStream from '@/images/logos/helio-stream.svg'
-import logoOpenShuttle from '@/images/logos/open-shuttle.svg'
 import logoPlanetaria from '@/images/logos/planetaria.svg'
 
 const services = [
@@ -15,28 +11,28 @@ const services = [
     description:
       'The next generation of security is here: Seasoned security and business professionals, working together and coming up with "right-sized" security. Our partnership will provide operational and strategic governance based on a nuanced understanding of your business, technology, and threat landscape.',
     link: { href: 'https://www.hp.com', label: 'hp.com', icon: ArrowTopRightIcon},
-    logo: logoAnimaginary,
+    logo: logoPlanetaria,
   },
   {
     name: 'Fractional CIO (vCIO)',
     description:
       'From ChatGPT to PC lifecycles.  The modern business of any size must be optimizing their current technologies and adapting the next big opportunity. Business enabling technologies are everywhere. We will partner to grow, evolve, and maintain your technology.',
     link: { href: 'https://www.kimberly-clark.com', label: 'kimberly-clark.com', icon: ArrowTopRightIcon },
-    logo: logoCosmos,
+    logo: logoPlanetaria,
   },
   {
     name: 'Consulting',
     description:
       'Bitfire Security provides most of your security and IT consulting needs. Sometimes you have a less-defined need and want a frank conversation.  Whether strategy, leadership, culture or technical, I\'m here to help.  Feel free to contact me directly.',
     link: { href: 'https://www.flooranddecor.com', label: 'flooranddecor.com', icon: EmailAtIcon },
-    logo: logoHelioStream,
+    logo: logoPlanetaria,
   },
   {
     name: 'Speaking',
     description:
       'I have a relaxed and direct style, capable of engaging executive, entry-level and non-technical audiences. My strengths are ad hoc conversation, and on-the-fly Q&A, perfect for panels, interviews, and highly-interactive sessions. Visuals and slides are optional and used for visualization and engagement.',
     link: { href: 'https://www.dla.mil', label: 'dla.mil', icon: EmailAtIcon },
-    logo: logoOpenShuttle,
+    logo: logoPlanetaria,
   },
   {
     name: 'AI Operations and Governance (Bitfire.ai)',

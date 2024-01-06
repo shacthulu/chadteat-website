@@ -9,6 +9,14 @@ import logoCosmos from '@/images/logos/cosmos.svg'
 import logoHelioStream from '@/images/logos/helio-stream.svg'
 import logoOpenShuttle from '@/images/logos/open-shuttle.svg'
 import logoPlanetaria from '@/images/logos/planetaria.svg'
+import logoHpes from '@/images/logos/hpes.svg'
+import logoKimberlyClark from '@/images/logos/kimberly-clark.svg'
+import logoThd from '@/images/logos/homedepot.svg'
+import logoEds from '@/images/logos/eds.svg'
+import logoFnd from '@/images/logos/fnd.svg'
+import logoBitfire from '@/images/logos/bitfire.png'
+import logoBitfireAi from '@/images/logos/bitfireai.png'
+import logoJustikar from '@/images/logos/justikar.png'
 
 
 const industryCompanies = [
@@ -17,63 +25,56 @@ const industryCompanies = [
     description:
       'Head of Security Operations and Engineering',
     link: { href: 'https://www.hp.com', label: 'hp.com', icon: ArrowTopRightIcon},
-    logo: logoAnimaginary,
+    logo: logoHpes,
   },
   {
     name: 'Kimberly-Clark Corporation',
     description:
       'Deputy CISO',
     link: { href: 'https://www.kimberly-clark.com', label: 'kimberly-clark.com', icon: ArrowTopRightIcon },
-    logo: logoCosmos,
+    logo: logoKimberlyClark,
   },
   {
     name: 'The Home Depot',
     description:
       'Information Risk Managment',
     link: { href: 'https://www.flooranddecor.com', label: 'flooranddecor.com', icon: EmailAtIcon },
-    logo: logoHelioStream,
+    logo: logoThd,
   },
   {
     name: 'Electronic Data Systems',
     description:
       'Security Information Service Developer',
     link: { href: 'https://www.dla.mil', label: 'dla.mil', icon: EmailAtIcon },
-    logo: logoOpenShuttle,
+    logo: logoEds,
   },
   {
     name: 'Floor and Decor',
     description:
       'CISO',
     link: { href: 'https://www.homedepot.com', label: 'homedepot.com', icon: 'external' },
-    logo: logoPlanetaria,
+    logo: logoFnd,
   },
   {
     name: 'Bitfire Security',
     description:
       'Founder, vCISO Principle',
     link: { href: 'https://www.homedepot.com', label: 'homedepot.com', type:'external' },
-    logo: logoPlanetaria,
+    logo: logoBitfire,
   },
   {
     name: 'Bitfire.ai',
     description:
-      'Partner',
+      'Partner, Field CISO',
     link: { href: 'https://www.homedepot.com', label: 'homedepot.com', icon: 'external' },
-    logo: logoPlanetaria,
+    logo: logoBitfireAi,
   },
   {
     name: 'Justikar',
     description:
       'Partner',
     link: { href: 'https://www.homedepot.com', label: 'homedepot.com', icon: 'external' },
-    logo: logoPlanetaria,
-  },
-  {
-    name: 'TargetProof',
-    description:
-      'Chief Architect',
-    link: { href: 'https://www.homedepot.com', label: 'homedepot.com', icon: 'external' },
-    logo: logoPlanetaria,
+    logo: logoJustikar,
   },
 ]
 
@@ -83,28 +84,28 @@ const clientCompanies = [
     description:
       'Architecture and Engineering',
     link: { href: 'https://www.hp.com', label: 'hp.com', icon: ArrowTopRightIcon},
-    logo: logoAnimaginary,
+    logo: logoPlanetaria,
   },
   {
     name: 'Express Scripts International',
     description:
       'Compliance and Engineering',
     link: { href: 'https://www.kimberly-clark.com', label: 'kimberly-clark.com', icon: ArrowTopRightIcon },
-    logo: logoCosmos,
+    logo: logoPlanetaria,
   },
   {
     name: 'Honeybaked Ham',
     description:
       'Policy, Governance and Application Security',
     link: { href: 'https://www.flooranddecor.com', label: 'flooranddecor.com', icon: EmailAtIcon },
-    logo: logoHelioStream,
+    logo: logoPlanetaria,
   },
   {
     name: 'TSG Resolute',
     description:
       'Strategy, Architecture and Engineering',
     link: { href: 'https://www.dla.mil', label: 'dla.mil', icon: EmailAtIcon },
-    logo: logoOpenShuttle,
+    logo: logoPlanetaria,
   },
   {
     name: 'Consolidated Engineering Company',
@@ -177,48 +178,27 @@ const mentorCompanies = [
     description:
       'Executive Mentoring and Advisory',
     link: { href: 'https://www.hp.com', label: 'hp.com', icon: ArrowTopRightIcon},
-    logo: logoAnimaginary,
+    logo: logoPlanetaria,
   },
   {
     name: 'Hearst',
     description:
       'Executive Mentoring and Advisory',
     link: { href: 'https://www.kimberly-clark.com', label: 'kimberly-clark.com', icon: ArrowTopRightIcon },
-    logo: logoCosmos,
+    logo: logoPlanetaria,
   },
   {
     name: 'McKesson',
     description:
       'Executive Mentoring and Advisory',
     link: { href: 'https://www.flooranddecor.com', label: 'flooranddecor.com', icon: EmailAtIcon },
-    logo: logoHelioStream,
+    logo: logoPlanetaria,
   },
   {
     name: 'Consolidated Engineering Company',
     description:
       'Home Depot.',
     link: { href: 'https://www.dla.mil', label: 'dla.mil', icon: EmailAtIcon },
-    logo: logoOpenShuttle,
-  },
-  {
-    name: 'Floor and Decor',
-    description:
-      'Bitfir.',
-    link: { href: 'https://www.homedepot.com', label: 'homedepot.com', icon: 'external' },
-    logo: logoPlanetaria,
-  },
-  {
-    name: 'Professional Services (Bitfire Security)',
-    description:
-      'Bitfire.',
-    link: { href: 'https://www.homedepot.com', label: 'homedepot.com', type:'external' },
-    logo: logoPlanetaria,
-  },
-  {
-    name: 'Managed IT Services (Justikar)',
-    description:
-      'Justiy pedigree.',
-    link: { href: 'https://www.homedepot.com', label: 'homedepot.com', icon: 'external' },
     logo: logoPlanetaria,
   },
 ]
@@ -286,8 +266,8 @@ function Tool({
 }
 
 export const metadata = {
-  title: 'Method',
-  description: 'Software I use, gadgets I love, and other things I recommend.',
+  title: 'Clients',
+  description: "Great companies I've worked with.",
 }
 
 export default function Uses() {
@@ -304,7 +284,7 @@ export default function Uses() {
       >
         {industryCompanies.map((service) => (
           <Card as="li" key={service.name}>
-            <div className="relative z-10 flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
+            <div className="relative z-10 flex h-12 w-12 items-center justify-center rounded-md bg-white shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
               <Image
                 src={service.logo}
                 alt=""

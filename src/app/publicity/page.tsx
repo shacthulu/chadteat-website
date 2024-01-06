@@ -52,7 +52,7 @@ export default function Speaking() {
       title="Public works and accolades."
       intro="While I've contributed to many publications, podcasts, and events, here are some of my favorites."
     >
-      <div className="space-y-20">
+      <div className="space-y-16">
         <SpeakingSection title="Accolades">
           <Appearance
             href="#"
@@ -63,7 +63,7 @@ export default function Speaking() {
           />
           <Appearance
             href="#"
-            title="Best Security Program 2015, 2016, 2017"
+            title="Best Security Program (Three Times)"
             description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
             event="CSO Magazine"
             cta="Lorem ipsum"
@@ -72,7 +72,7 @@ export default function Speaking() {
             href="#"
             title="Most Influential Professor"
             description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-            event="CSO Magazine"
+            event="Kennesaw State University"
             cta="Lorem ipsum"
           />
           <Appearance
@@ -139,9 +139,7 @@ export default function Speaking() {
             description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
             event="GlobalCISO Certification Program"
             cta="Lorem ipsum"
-          />
-        </SpeakingSection>
-        <SpeakingSection title="Lectures">
+          />,
           <Appearance
             href="#"
             title="Effective and Secure Usage of IT for Healthcare Professionals"
@@ -149,6 +147,8 @@ export default function Speaking() {
             event="KSU Continuing Education"
             cta="Lorem ipsum"
           />
+        </SpeakingSection>
+        <SpeakingSection title="Lectures">
           <Appearance
             href="#"
             title="Game Design and Development with C# and Unity"
@@ -230,13 +230,12 @@ export default function Speaking() {
           />
           <Appearance
             href="#"
-            title="The Effects of Grid Computing and Cryptanalysis on Common Cryptosystems "
+            title="The Effects of Grid Computing and Cryptanalysis on Common Cryptosystems"
             description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
             event="Kennesaw State University Master's Thesis"
             cta="Lorem ipsum"
           />
         </SpeakingSection>
-
       </div>
     </SimpleLayout>
   )
