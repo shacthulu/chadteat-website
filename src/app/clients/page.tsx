@@ -58,7 +58,7 @@ const industryCompanies = [
   {
     name: 'Bitfire Security',
     description:
-      'Founder, vCISO Principle',
+      'Founder, Consulting Principle',
     link: { href: 'https://www.homedepot.com', label: 'homedepot.com', type:'external' },
     logo: logoBitfire,
   },
@@ -72,7 +72,7 @@ const industryCompanies = [
   {
     name: 'Justikar',
     description:
-      'Partner',
+      'Partner, Field CISO',
     link: { href: 'https://www.homedepot.com', label: 'homedepot.com', icon: 'external' },
     logo: logoJustikar,
   },
@@ -195,7 +195,7 @@ const mentorCompanies = [
     logo: logoPlanetaria,
   },
   {
-    name: 'Consolidated Engineering Company',
+    name: 'Kimberly-Clark Corporation',
     description:
       'Home Depot.',
     link: { href: 'https://www.dla.mil', label: 'dla.mil', icon: EmailAtIcon },
