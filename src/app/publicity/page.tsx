@@ -36,7 +36,7 @@ function Appearance( {
         { title }
       </Card.Title>
       <Card.Eyebrow decorate>{ event }</Card.Eyebrow>
-      <Card.Description>{ description }</Card.Description>
+      {description !== "" ? <Card.Description>{ description }</Card.Description> : null }
       { cta !== "" ? <Card.Cta>{ cta }</Card.Cta> : null }
     </Card>
   )
@@ -143,8 +143,8 @@ export default function Speaking() {
           />
           <Appearance
             href="https://cpe.kennesaw.edu/"
-            title="Effective and Secure Usage of IT for Healthcare Professionals"
-            description="I presented and fielded questions for a large room of healthcare professionals.  I guided them through secure technology usage, compliance requirements, and leveraging technology to improve patient outcomes."
+            title="Management of Information Technology"
+            description="I developed a curriculum, presented and fielded questions for a large room of healthcare professionals.  I guided them through secure technology usage, compliance requirements, and leveraging technology to improve patient outcomes."
             event="KSU Continuing Education"
             cta=""
           />
@@ -152,89 +152,103 @@ export default function Speaking() {
         <SpeakingSection title="Lectures">
           <Appearance
             href="https://www.kennesaw.edu/"
-            title="Game Design and Development with C# and Unity"
-            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-            event="Southern Polytechnic State University"
-            cta="Lorem ipsum"
-          />
-          <Appearance
-            href="https://www.kennesaw.edu/"
             title="Advanced Java Programming"
-            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+            description=""
             event="Southern Polytechnic State University"
-            cta="Lorem ipsum"
-          />
-          <Appearance
-            href="https://www.kennesaw.edu/"
-            title="Intro to Object Oriented Programming"
-            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-            event="The Academy for Computing Machinery (ACM)"
-            cta="Lorem ipsum"
+            cta=""
           />
           <Appearance
             href="https://www.kennesaw.edu/"
             title="Ethical Hacking"
-            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+            description=""
             event="Kennesaw State University"
-            cta="Lorem ipsum"
+            cta=""
           />
           <Appearance
             href="https://www.kennesaw.edu/"
-            title="System Design and Administration"
-            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+            title="Information Security Administration"
+            description=""
             event="Kennesaw State University"
-            cta="Lorem ipsum"
+            cta=""
           />
           <Appearance
             href="https://www.kennesaw.edu/"
-            title="Defensive Systems"
-            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+            title="Hardware and Software Concepts"
+            description=""
             event="Kennesaw State University"
-            cta="Lorem ipsum"
+            cta=""
+          />
+          <Appearance
+            href="https://www.kennesaw.edu/"
+            title="Linux/Unix Administration"
+            description=""
+            event="Kennesaw State University"
+            cta=""
+          />
+          <Appearance
+            href="https://www.kennesaw.edu/"
+            title="Intro to Object Oriented Programming (Java and C#)"
+            description=""
+            event="The Academy for Computing Machinery (ACM)"
+            cta=""
+          />
+          <Appearance
+            href="https://www.kennesaw.edu/"
+            title="Game Design and Development with C# and Unity"
+            description=""
+            event="Southern Polytechnic State University"
+            cta=""
+          />
+          <Appearance
+            href="https://www.kennesaw.edu/"
+            title="Infrastructure Defense"
+            description=""
+            event="Kennesaw State University"
+            cta=""
+          />
+          <Appearance
+            href="https://www.kennesaw.edu/"
+            title="Advanced .NET Programming"
+            description=""
+            event="Southern Polytechnic State University"
+            cta=""
           />
         </SpeakingSection>
         <SpeakingSection title="Publications">
           <Appearance
-            href="#"
+            href="https://www.acm.org/"
             title="Incorporating Current Events into Information Assurance"
-            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+            description="Co-authored with Dr. Svetlana Peltsverger, this publication explored novel ."
             event="InfoSec CD Eastern Conference"
-            cta="Lorem ipsum"
+            cta=""
           />
           <Appearance
             href="#"
             title="Friendship 101: How to Steal Data from Friends for Fun and Profit "
-            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+            description="In what was unheard of at the time, this research and accompanying paper followed along a controlled social-media based phishing campaign. Social media profiles, posts, and other information were leveraged for a 'pull' approach to phishing."
             event="InfoSec CD Eastern Conference"
-            cta="Lorem ipsum"
+            cta=""
           />
           <Appearance
             href="#"
             title="The Security of Cryptographic Hashes"
-            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+            description="Quoted by researchers and conferences worldwide, this publication was the first to quantify risk and project the strength of passwords and cryptosystems based on threat actor resources such as hardware and finances."
             event="The Academy for Computing Machinery (ACM)"
-            cta="Lorem ipsum"
+            cta=""
           />
           <Appearance
             href="#"
             title="Mitigating Mobile Risk with Continuous Diagnostic and Mitigation (CDM)"
-            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-            event="The Academy for Computing Machinery (ACM)"
-            cta="Lorem ipsum"
-          />
-          <Appearance
-            href="#"
-            title="The Security of Cryptographic Hashes"
-            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-            event="The Academy for Computing Machinery (ACM)"
-            cta="Lorem ipsum"
+            description="Co-authored with Symantec, this publication introduced a new way of managing mobile risk through automated compliance and remediation."
+            event="HP Protect Conference"
+            cta=""
           />
           <Appearance
             href="#"
             title="The Effects of Grid Computing and Cryptanalysis on Common Cryptosystems"
-            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+            description="This thesis was the basis of the later acclaimed publication 'The Security of Cryptographic Hashes'.  The thesis is a larger body of work consisting of over 100 pages of analysis, condensing results from hundreds of hours of research."
             event="Kennesaw State University Master's Thesis"
-            cta="Lorem ipsum"
+            cta=""
           />
         </SpeakingSection>
       </div>
