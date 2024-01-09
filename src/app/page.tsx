@@ -14,16 +14,13 @@ import {
 } from '@/components/SocialIcons'
 import logoUndrawPieGraph from '@/images/logos/undraw_pie_graph_re_fvol.svg'
 import logoUndrawTeaching from '@/images/logos/undraw_teaching_re_g7e3.svg'
-import iconRadar from '@/images/icons/fa_radar.svg'
 import logoUndrawGroupHangout from '@/images/logos/undraw_group_hangout_re_4t8r.svg'
 import logoUndrawAcceptTasks from '@/images/logos/undraw_accept_tasks_re_09mv.svg'
 
 import { type ArticleWithSlug, getAllArticles } from '@/lib/articles'
 import { formatDate } from '@/lib/formatDate'
 
-// TODO: Change services icons, maybe to FontAwesome?
-// TODO: Wire up "stay up to date" -- maybe start with a "reach out"
-// TODO: Remove "Download CV" for now
+// TODO: Revisit icons.  I like the actual icons but their size makes it difficult to discern.  Good enough for now.
 
 const intro: String = "Explore this site if you're interested in working with me personally for executive advisory, fractional CISO, CIO, and speaking engagements. Follow me on Twitter, LinkedIN or subscribe to my minimilist email updates if you are here for the articles and thousands of dollars worth of consulting resources I regularly release."
 
@@ -57,34 +54,37 @@ function SocialLink( {
   )
 }
 
-function Newsletter() {
+function Contact() {
   return (
-    <form
-      action="/thank-you"
-      className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40"
-    >
+    <div className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40">
       <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
         <MailIcon className="h-6 w-6 flex-none" />
-        <span className="ml-3">Stay up to date</span>
+        <span className="ml-3">Ready to Talk?</span>
       </h2>
       <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
-        Get notified when I publish something new, and unsubscribe at any time.
+        Send me a message letting me know how you&apos;d like to work together.
       </p>
-      <div className="mt-6 flex">
-        <input
-          type="email"
-          placeholder="Email address"
-          aria-label="Email address"
-          required
-          className="min-w-0 flex-auto appearance-none rounded-md border border-zinc-900/10 bg-white px-3 py-[calc(theme(spacing.2)-1px)] shadow-md shadow-zinc-800/5 placeholder:text-zinc-400 focus:border-teal-500 focus:outline-none focus:ring-4 focus:ring-teal-500/10 dark:border-zinc-700 dark:bg-zinc-700/[0.15] dark:text-zinc-200 dark:placeholder:text-zinc-500 dark:focus:border-teal-400 dark:focus:ring-teal-400/10 sm:text-sm"
-        />
-        <Button type="submit" className="ml-4 flex-none">
-          Join
-        </Button>
+      <div className="mt-3">
+        <EmailButton />
+        </div>
       </div>
-    </form>
   )
 }
+
+function EmailButton () {
+  // Define the recipient, subject, and body
+  const to = "chad@chadteat.com";
+  const subject = encodeURIComponent("Partnership Inquiry");
+
+  // Create the mailto link
+  const mailtoLink = `mailto:${to}?subject=${subject}`;
+
+  return (
+    <a href={ mailtoLink } className="inline-flex items-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50" >
+      Send Email
+    </a>
+  );
+};
 
 interface Service {
   service: string
@@ -134,12 +134,12 @@ function Services() {
     },
     {
       service: 'Consulting',
-      subtitle: 'Over 100 consulting engagements performed',
+      subtitle: '90 consulting engagements performed',
       logo: logoUndrawAcceptTasks,
     },
     {
       service: 'Speaker',
-      subtitle: '14 conferences and over 700 students taught',
+      subtitle: '14 conferences and over 100 lectures given',
       logo: logoUndrawTeaching,
     },
   ]
@@ -207,7 +207,7 @@ export default async function Home() {
             <Link href={ '' } className="-my-10 text-sm font-medium text-teal-500 h-5">More...</Link>
           </div>
           <div className="space-y-10 lg:pl-16 xl:pl-24">
-            <Newsletter />
+            <Contact />
             <Services />
           </div>
         </div>
@@ -263,20 +263,70 @@ function BriefcaseIcon( props: React.ComponentPropsWithoutRef<'svg'> ) {
   )
 }
 
-function ArrowDownIcon( props: React.ComponentPropsWithoutRef<'svg'> ) {
-  return (
-    <svg viewBox="0 0 16 16" fill="none" aria-hidden="true" { ...props }>
-      <path
-        d="M4.75 8.75 8 12.25m0 0 3.25-3.5M8 12.25v-8.5"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
-  )
-}
+// function ArrowDownIcon( props: React.ComponentPropsWithoutRef<'svg'> ) {
+//   return (
+//     <svg viewBox="0 0 16 16" fill="none" aria-hidden="true" { ...props }>
+//       <path
+//         d="M4.75 8.75 8 12.25m0 0 3.25-3.5M8 12.25v-8.5"
+//         strokeWidth="1.5"
+//         strokeLinecap="round"
+//         strokeLinejoin="round"
+//       />
+//     </svg>
+//   )
+// }
 
 // Unused components which may be re-added
+// function ContactMe() {
+//   return (
+//     <div className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40">
+//       <div className="px-4 py-5 sm:p-6">
+//         <h3 className="text-base font-semibold leading-6 text-gray-900">Need more bandwidth?</h3>
+//         <div className="mt-2 max-w-xl text-sm text-gray-500">
+//           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus praesentium tenetur pariatur.</p>
+//         </div>
+//         <div className="mt-5">
+//           <button
+//             type="button"
+//             className="inline-flex items-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50"
+//           >
+//             Contact sales
+//           </button>
+//         </div>
+//       </div>
+//     </div>
+//   )
+// }
+
+// function Newsletter() {
+//   return (
+//     <form
+//       action="/thank-you"
+//       className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40"
+//     >
+//       <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
+//         <MailIcon className="h-6 w-6 flex-none" />
+//         <span className="ml-3">Contact Me</span>
+//       </h2>
+//       <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
+//         Send me a message .
+//       </p>
+//       <div className="mt-6 flex">
+//         <input
+//           type="email"
+//           placeholder="Email address"
+//           aria-label="Email address"
+//           required
+//           className="min-w-0 flex-auto appearance-none rounded-md border border-zinc-900/10 bg-white px-3 py-[calc(theme(spacing.2)-1px)] shadow-md shadow-zinc-800/5 placeholder:text-zinc-400 focus:border-teal-500 focus:outline-none focus:ring-4 focus:ring-teal-500/10 dark:border-zinc-700 dark:bg-zinc-700/[0.15] dark:text-zinc-200 dark:placeholder:text-zinc-500 dark:focus:border-teal-400 dark:focus:ring-teal-400/10 sm:text-sm"
+//         />
+//         <Button type="submit" className="ml-4 flex-none">
+//           Join
+//         </Button>
+//       </div>
+//     </form>
+//   )
+// }
+
 // function Testimonial() {
 //   return (
 //     <section className="relative isolate overflow-hidden px-6 py-12 sm:py-8 lg:px-8">

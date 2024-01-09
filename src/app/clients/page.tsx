@@ -27,13 +27,8 @@ import logoHearst from '@/images/logos/hearst.jpg'
 import logoMckesson from '@/images/logos/mckesson.png'
 import logoAndMore from '@/images/logos/rectangle-history-plus.svg'
 
-// TODO: Add metadata
 // TODO: Verify links
 // TODO: Change to "Work" and update links
-// TODO: Remove "roles" from section titles
-// TODO: Remove the "NDA" thing
-// TODO: Consider the "X+ more" thing to sync up with the main page's claim of quantity
-
 
 const industryCompanies = [
   {
@@ -290,10 +285,10 @@ export default function Uses() {
   return (
 <SimpleLayout
   title="Great companies I've worked with"
-  intro="You should expect your partners to know the industry as a practitioner, not just a consultant.  My industry experience is listed first as, in those organizations, I sat in your seat, working for the company.  You'll then find the amazing companies I've worked with as a consultant and advisor (many are omitted due to NDA)."
+  intro="You should expect your partners to know the industry as a practitioner, not just a consultant.  My industry experience is listed first as, in those organizations, I sat in your seat, working for the company.  In the next section you'll see the organizations that trusted me to identify and solve the complex challenges of a modern business.  Security is a journey and, in the final section, you'll find the companies where I've mentored or advised leaders on a long-term basis."
 >
   <div className="space-y-20">
-    <RoleSection title="Industry Roles">
+    <RoleSection title="Industry">
     <ul
         role="list"
         className="grid grid-cols-1 gap-x-12 gap-y-16 sm:grid-cols-2 lg:grid-cols-3"
@@ -321,7 +316,7 @@ export default function Uses() {
         ))}
       </ul>
     </RoleSection>
-    <RoleSection title="Consulting Roles">
+    <RoleSection title="Consulting">
     <ul
         role="list"
         className="grid grid-cols-1 gap-x-12 gap-y-16 sm:grid-cols-2 lg:grid-cols-3"
@@ -349,7 +344,7 @@ export default function Uses() {
         ))}
       </ul>
     </RoleSection>
-    <RoleSection title="Mentor and Advisory">
+    <RoleSection title="Mentorship and Advisory">
     <ul
         role="list"
         className="grid grid-cols-1 gap-x-12 gap-y-16 sm:grid-cols-2 lg:grid-cols-3"
