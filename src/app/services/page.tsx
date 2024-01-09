@@ -5,19 +5,17 @@ import { Card } from '@/components/Card'
 import { SimpleLayout } from '@/components/SimpleLayout'
 import logoPlanetaria from '@/images/logos/planetaria.svg'
 
+// TODO: Update icons
+// TODO: Add data sheet for Fractional CISO and a "more" pop up with additional details
+// TODO: Add email and mailto for consulting, speaking, and fractional CISO
+// TODO: Update links to bitfire.ai, bitfiersecurity, justikar
+
 const services = [
   {
     name: 'Fractional CISO (vCISO)',
     description:
-      'The next generation of security is here: Seasoned security and business professionals, working together and coming up with "right-sized" security. Our partnership will provide operational and strategic governance based on a nuanced understanding of your business, technology, and threat landscape.',
+      'The next generation of security is here and it\'s not technologyl. Seasoned information risk management professionals, accelerating your business and making smart investments. All companies need a CISO.  Most only need a fraction of that CISO.  Our partnership will provide operational and strategic governance based on a nuanced understanding of your business, technology, and threat landscape.',
     link: { href: 'https://www.hp.com', label: 'hp.com', icon: ArrowTopRightIcon},
-    logo: logoPlanetaria,
-  },
-  {
-    name: 'Fractional CIO (vCIO)',
-    description:
-      'From ChatGPT to PC lifecycles.  The modern business of any size must be optimizing their current technologies and adapting the next big opportunity. Business enabling technologies are everywhere. We will partner to grow, evolve, and maintain your technology.',
-    link: { href: 'https://www.kimberly-clark.com', label: 'kimberly-clark.com', icon: ArrowTopRightIcon },
     logo: logoPlanetaria,
   },
   {
@@ -30,7 +28,7 @@ const services = [
   {
     name: 'Speaking',
     description:
-      'I have a relaxed and direct style, capable of engaging executive, entry-level and non-technical audiences. My strengths are ad hoc conversation, and on-the-fly Q&A, perfect for panels, interviews, and highly-interactive sessions. Visuals and slides are optional and used for visualization and engagement.',
+      'I have a relaxed and direct style, capable of engaging executive, entry-level and non-technical audiences. I have an extended skillset with are ad hoc conversation, and on-the-fly Q&A; perfect for panels, interviews, and highly-interactive sessions. Visuals and slides are optional and used for visualization and engagement.',
     link: { href: 'https://www.dla.mil', label: 'dla.mil', icon: EmailAtIcon },
     logo: logoPlanetaria,
   },

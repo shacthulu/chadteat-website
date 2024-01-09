@@ -3,12 +3,6 @@ import { Section } from '@/components/Section'
 import { SimpleLayout } from '@/components/SimpleLayout'
 import { type Metadata } from 'next'
 import Image from 'next/image'
-
-import logoAnimaginary from '@/images/logos/animaginary.svg'
-import logoCosmos from '@/images/logos/cosmos.svg'
-import logoHelioStream from '@/images/logos/helio-stream.svg'
-import logoOpenShuttle from '@/images/logos/open-shuttle.svg'
-import logoPlanetaria from '@/images/logos/planetaria.svg'
 import logoHpes from '@/images/logos/hpes.svg'
 import logoKimberlyClark from '@/images/logos/kimberly-clark.svg'
 import logoThd from '@/images/logos/homedepot.svg'
@@ -17,6 +11,28 @@ import logoFnd from '@/images/logos/fnd.svg'
 import logoBitfire from '@/images/logos/bitfire.png'
 import logoBitfireAi from '@/images/logos/bitfireai.png'
 import logoJustikar from '@/images/logos/justikar.png'
+import logoDLA from '@/images/logos/dla_logo.png'
+import logoExpressScripts from '@/images/logos/express_scripts.jpg'
+import logoHoneybakedHam from '@/images/logos/hbh.png'
+import logoTSG from '@/images/logos/tsg-crop.png'
+import logoCEC from '@/images/logos/cec.jpg'
+import logoGSA from '@/images/logos/gsa.jpg'
+import logoICE from '@/images/logos/ice.jpg'
+import logoDISA from '@/images/logos/disa.jpg'
+import logoSymantec from '@/images/logos/symantec.jpg'
+import logoIntel from '@/images/logos/intel.png'
+import logoGuidepoint from '@/images/logos/guidepoint.png'
+import logoTesla from '@/images/logos/tesla.png'
+import logoHearst from '@/images/logos/hearst.jpg'
+import logoMckesson from '@/images/logos/mckesson.png'
+import logoAndMore from '@/images/logos/rectangle-history-plus.svg'
+
+// TODO: Add metadata
+// TODO: Verify links
+// TODO: Change to "Work" and update links
+// TODO: Remove "roles" from section titles
+// TODO: Remove the "NDA" thing
+// TODO: Consider the "X+ more" thing to sync up with the main page's claim of quantity
 
 
 const industryCompanies = [
@@ -38,42 +54,42 @@ const industryCompanies = [
     name: 'The Home Depot',
     description:
       'Information Risk Managment',
-    link: { href: 'https://www.flooranddecor.com', label: 'flooranddecor.com', icon: EmailAtIcon },
+    link: { href: 'https://www.homedepot.com', label: 'homedepot.com', icon: EmailAtIcon },
     logo: logoThd,
   },
   {
     name: 'Electronic Data Systems',
     description:
       'Security Information Service Developer',
-    link: { href: 'https://www.dla.mil', label: 'dla.mil', icon: EmailAtIcon },
+    link: { href: 'https://www.dxc.com', label: 'eds.com', icon: EmailAtIcon },
     logo: logoEds,
   },
   {
     name: 'Floor and Decor',
     description:
       'CISO',
-    link: { href: 'https://www.homedepot.com', label: 'homedepot.com', icon: 'external' },
+    link: { href: 'https://www.flooranddecor.com', label: 'flooranddecor.com', icon: 'external' },
     logo: logoFnd,
   },
   {
     name: 'Bitfire Security',
     description:
       'Founder, Consulting Principle',
-    link: { href: 'https://www.homedepot.com', label: 'homedepot.com', type:'external' },
+    link: { href: 'https://www.bitfiresecurity.com', label: 'bitfiresecurity.com', type:'external' },
     logo: logoBitfire,
   },
   {
     name: 'Bitfire.ai',
     description:
       'Partner, Field CISO',
-    link: { href: 'https://www.homedepot.com', label: 'homedepot.com', icon: 'external' },
+    link: { href: 'https://www.bitfire.ai', label: 'bitfire.ai', icon: 'external' },
     logo: logoBitfireAi,
   },
   {
     name: 'Justikar',
     description:
       'Partner, Field CISO',
-    link: { href: 'https://www.homedepot.com', label: 'homedepot.com', icon: 'external' },
+    link: { href: 'https://www.justikar.com', label: 'bitfire.ai', icon: 'external' },
     logo: logoJustikar,
   },
 ]
@@ -83,92 +99,85 @@ const clientCompanies = [
     name: 'Defense Logistics Agency',
     description:
       'Architecture and Engineering',
-    link: { href: 'https://www.hp.com', label: 'hp.com', icon: ArrowTopRightIcon},
-    logo: logoPlanetaria,
+    link: { href: 'https://www.dla.mil', label: 'dla.mil', icon: ArrowTopRightIcon},
+    logo: logoDLA,
   },
   {
     name: 'Express Scripts International',
     description:
       'Compliance and Engineering',
-    link: { href: 'https://www.kimberly-clark.com', label: 'kimberly-clark.com', icon: ArrowTopRightIcon },
-    logo: logoPlanetaria,
+    link: { href: 'https://www.express-scripts.com', label: 'express-scripts.com', icon: ArrowTopRightIcon },
+    logo: logoExpressScripts,
   },
   {
     name: 'Honeybaked Ham',
     description:
       'Policy, Governance and Application Security',
-    link: { href: 'https://www.flooranddecor.com', label: 'flooranddecor.com', icon: EmailAtIcon },
-    logo: logoPlanetaria,
+    link: { href: 'https://www.honeybaked.com', label: 'honeybaked.com', icon: EmailAtIcon },
+    logo: logoHoneybakedHam,
   },
   {
     name: 'TSG Resolute',
     description:
       'Strategy, Architecture and Engineering',
-    link: { href: 'https://www.dla.mil', label: 'dla.mil', icon: EmailAtIcon },
-    logo: logoPlanetaria,
+    link: { href: 'https://www.tsgresolute.com', label: 'tsgresolute.com', icon: EmailAtIcon },
+    logo: logoTSG,
   },
   {
     name: 'Consolidated Engineering Company',
     description:
       'Security Assessment and Compliance',
-    link: { href: 'https://www.homedepot.com', label: 'homedepot.com', icon: 'external' },
-    logo: logoPlanetaria,
-  },
-  {
-    name: 'G*Squared',
-    description:
-      'Policy and Governance',
-    link: { href: 'https://www.homedepot.com', label: 'homedepot.com', type:'external' },
-    logo: logoPlanetaria,
+    link: { href: 'https://www.cecfurnaces.com', label: 'cecfurnaces.com', icon: 'external' },
+    logo: logoCEC,
   },
   {
     name: 'Symantec',
     description:
-      'Product Development and Integrations',
-    link: { href: 'https://www.homedepot.com', label: 'homedepot.com', icon: 'external' },
-    logo: logoPlanetaria,
+      'External Data Integrations and Automation',
+    link: { href: 'https://www.symantec.com', label: 'symantec.com', icon: 'external' },
+    logo: logoSymantec,
   },
   {
-    name: 'McAfee',
+    name: 'Intel',
     description:
-      'Product Development and Integrations',
-    link: { href: 'https://www.homedepot.com', label: 'homedepot.com', icon: 'external' },
-    logo: logoPlanetaria,
-  },
-  {
-    name: 'Intel Security',
-    description:
-      'Product Development and Integrations',
-    link: { href: 'https://www.homedepot.com', label: 'homedepot.com', icon: 'external' },
-    logo: logoPlanetaria,
+      'External Data Integrations and Automation',
+    link: { href: 'https://www.intel.com', label: 'intel.com', icon: 'external' },
+    logo: logoIntel,
   },
   {
     name: 'Guidepoint',
     description:
       'Policy and Strategy',
-    link: { href: 'https://www.homedepot.com', label: 'homedepot.com', icon: 'external' },
-    logo: logoPlanetaria,
+    link: { href: 'https://www.guidepointsecurity.com', label: 'guidepointsecurity.com', icon: 'external' },
+    logo: logoGuidepoint,
   },
   {
     name: 'General Services Administration (GSA)',
     description:
       'Architecture and Engineering',
-    link: { href: 'https://www.homedepot.com', label: 'homedepot.com', icon: 'external' },
-    logo: logoPlanetaria,
+    link: { href: 'https://www.gsa.gov', label: 'gsa.gov', icon: 'external' },
+    logo: logoGSA,
   },
   {
     name: 'Immigration and Customs Enforcement (ICE)',
     description:
       'Architecture and Engineering',
-    link: { href: 'https://www.homedepot.com', label: 'homedepot.com', icon: 'external' },
-    logo: logoPlanetaria,
+    link: { href: 'https://www.ice.gov', label: 'ice.gov', icon: 'external' },
+    logo: logoICE,
   },
   {
-    name: 'Defense Information Security Agency (DISA)',
+    name: 'Defense Information Systems Agency (DISA)',
     description:
       'Policy and Strategy',
-    link: { href: 'https://www.homedepot.com', label: 'homedepot.com', icon: 'external' },
-    logo: logoPlanetaria,
+    link: { href: 'https://www.disa.mil', label: 'disa.mil', icon: 'external' },
+    logo: logoDISA,
+  },
+  {
+    name: '11 More',
+    description:
+      'Omitted for privacy',
+    link: { href: 'https://www.disa.mil', label: 'disa.mil', icon: 'external' },
+    logo: logoAndMore,
   },
 ]
 
@@ -177,29 +186,36 @@ const mentorCompanies = [
     name: 'Tesla',
     description:
       'Executive Mentoring and Advisory',
-    link: { href: 'https://www.hp.com', label: 'hp.com', icon: ArrowTopRightIcon},
-    logo: logoPlanetaria,
+    link: { href: 'https://www.tesla.com', label: 'tesla.com', icon: ArrowTopRightIcon},
+    logo: logoTesla,
   },
   {
     name: 'Hearst',
     description:
       'Executive Mentoring and Advisory',
-    link: { href: 'https://www.kimberly-clark.com', label: 'kimberly-clark.com', icon: ArrowTopRightIcon },
-    logo: logoPlanetaria,
+    link: { href: 'https://www.hearst.com', label: 'hearst.com', icon: ArrowTopRightIcon },
+    logo: logoHearst,
   },
   {
     name: 'McKesson',
     description:
       'Executive Mentoring and Advisory',
-    link: { href: 'https://www.flooranddecor.com', label: 'flooranddecor.com', icon: EmailAtIcon },
-    logo: logoPlanetaria,
+    link: { href: 'https://www.mckesson.com', label: 'mckesson.com', icon: EmailAtIcon },
+    logo: logoMckesson,
   },
   {
     name: 'Kimberly-Clark Corporation',
     description:
       'Home Depot.',
-    link: { href: 'https://www.dla.mil', label: 'dla.mil', icon: EmailAtIcon },
-    logo: logoPlanetaria,
+    link: { href: 'https://www.kimberly-clark.com', label: 'kimberly-clark.com', icon: EmailAtIcon },
+    logo: logoKimberlyClark,
+  },
+  {
+    name: '5+ More',
+    description:
+      'Omitted for privacy',
+    link: { href: 'https://www.disa.mil', label: 'disa.mil', icon: 'external' },
+    logo: logoAndMore,
   },
 ]
 
@@ -233,7 +249,7 @@ function ArrowTopRightIcon( props: React.ComponentPropsWithoutRef<'svg'> ) {
 
   )
 }
-function ToolsSection({
+function RoleSection({
   children,
   ...props
 }: React.ComponentPropsWithoutRef<typeof Section>) {
@@ -246,27 +262,27 @@ function ToolsSection({
   )
 }
 
-function Tool({
-  title,
-  href,
-  children,
-}: {
-  title: string
-  href?: string
-  children: React.ReactNode
-}) {
-  return (
-    <Card as="li">
-      <Card.Title as="h3" href={href}>
-        {title}
-      </Card.Title>
-      <Card.Description>{children}</Card.Description>
-    </Card>
-  )
-}
+// function Tool({
+//   title,
+//   href,
+//   children,
+// }: {
+//   title: string
+//   href?: string
+//   children: React.ReactNode
+// }) {
+//   return (
+//     <Card as="li">
+//       <Card.Title as="h3" href={href}>
+//         {title}
+//       </Card.Title>
+//       <Card.Description>{children}</Card.Description>
+//     </Card>
+//   )
+// }
 
-export const metadata = {
-  title: 'Clients',
+export const metadata : Metadata = {
+  title: 'Experience',
   description: "Great companies I've worked with.",
 }
 
@@ -277,7 +293,7 @@ export default function Uses() {
   intro="You should expect your partners to know the industry as a practitioner, not just a consultant.  My industry experience is listed first as, in those organizations, I sat in your seat, working for the company.  You'll then find the amazing companies I've worked with as a consultant and advisor (many are omitted due to NDA)."
 >
   <div className="space-y-20">
-    <ToolsSection title="Industry Roles">
+    <RoleSection title="Industry Roles">
     <ul
         role="list"
         className="grid grid-cols-1 gap-x-12 gap-y-16 sm:grid-cols-2 lg:grid-cols-3"
@@ -298,21 +314,21 @@ export default function Uses() {
             <Card.Description>{ service.description }</Card.Description>
             <div className="mt-4"/>
             <p className="relative z-10 flex text-sm font-medium mt-auto text-zinc-400 transition group-hover:text-teal-500 dark:text-zinc-200">
-              <ArrowTopRightIcon className="h-6 w-6 flex-none" />
+              <LinkIcon className="h-6 w-6 flex-none" />
               <span className="ml-2">{service.link.label}</span>
             </p>
           </Card>
         ))}
       </ul>
-    </ToolsSection>
-    <ToolsSection title="Consulting Roles">
+    </RoleSection>
+    <RoleSection title="Consulting Roles">
     <ul
         role="list"
         className="grid grid-cols-1 gap-x-12 gap-y-16 sm:grid-cols-2 lg:grid-cols-3"
       >
         {clientCompanies.map((service) => (
           <Card as="li" key={service.name}>
-            <div className="relative z-10 flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
+            <div className="relative z-10 flex h-12 w-12 items-center justify-center rounded-md bg-white shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
               <Image
                 src={service.logo}
                 alt=""
@@ -326,21 +342,21 @@ export default function Uses() {
             <Card.Description>{ service.description }</Card.Description>
             <div className="mt-4"/>
             <p className="relative z-10 flex text-sm font-medium mt-auto text-zinc-400 transition group-hover:text-teal-500 dark:text-zinc-200">
-              <ArrowTopRightIcon className="h-6 w-6 flex-none" />
+              <LinkIcon className="h-6 w-6 flex-none" />
               <span className="ml-2">{service.link.label}</span>
             </p>
           </Card>
         ))}
       </ul>
-    </ToolsSection>
-    <ToolsSection title="Mentor and Advisory">
+    </RoleSection>
+    <RoleSection title="Mentor and Advisory">
     <ul
         role="list"
         className="grid grid-cols-1 gap-x-12 gap-y-16 sm:grid-cols-2 lg:grid-cols-3"
       >
         {mentorCompanies.map((service) => (
           <Card as="li" key={service.name}>
-            <div className="relative z-10 flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
+            <div className="relative z-10 flex h-12 w-12 items-center justify-center rounded-md bg-white shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
               <Image
                 src={service.logo}
                 alt=""
@@ -354,13 +370,13 @@ export default function Uses() {
             <Card.Description>{ service.description }</Card.Description>
             <div className="mt-4"/>
             <p className="relative z-10 flex text-sm font-medium mt-auto text-zinc-400 transition group-hover:text-teal-500 dark:text-zinc-200">
-              <ArrowTopRightIcon className="h-6 w-6 flex-none" />
+              <LinkIcon className="h-6 w-6 flex-none" />
               <span className="ml-2">{service.link.label}</span>
             </p>
           </Card>
         ))}
       </ul>
-    </ToolsSection>
+    </RoleSection>
   </div>
 </SimpleLayout>
 

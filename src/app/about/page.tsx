@@ -12,6 +12,8 @@ import {
 } from '@/components/SocialIcons'
 import portraitImage from '@/images/portrait.jpg'
 
+// TODO: Update content and links
+
 
 function SocialLink({
   className,

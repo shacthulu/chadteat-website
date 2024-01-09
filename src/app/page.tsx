@@ -14,10 +14,16 @@ import {
 } from '@/components/SocialIcons'
 import logoUndrawPieGraph from '@/images/logos/undraw_pie_graph_re_fvol.svg'
 import logoUndrawTeaching from '@/images/logos/undraw_teaching_re_g7e3.svg'
+import iconRadar from '@/images/icons/fa_radar.svg'
 import logoUndrawGroupHangout from '@/images/logos/undraw_group_hangout_re_4t8r.svg'
 import logoUndrawAcceptTasks from '@/images/logos/undraw_accept_tasks_re_09mv.svg'
+
 import { type ArticleWithSlug, getAllArticles } from '@/lib/articles'
 import { formatDate } from '@/lib/formatDate'
+
+// TODO: Change services icons, maybe to FontAwesome?
+// TODO: Wire up "stay up to date" -- maybe start with a "reach out"
+// TODO: Remove "Download CV" for now
 
 const intro: String = "Explore this site if you're interested in working with me personally for executive advisory, fractional CISO, CIO, and speaking engagements. Follow me on Twitter, LinkedIN or subscribe to my minimilist email updates if you are here for the articles and thousands of dollars worth of consulting resources I regularly release."
 
@@ -91,21 +97,23 @@ function Service( { service }: { service: Service } ) {
   return (
     <li className="flex gap-4">
       <div className="relative mt-1 flex h-13 w-13 flex-none items-center justify-center rounded-lg shadow-md dark:bg-zinc-800 shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:ring-0">
-        <Image src={ service.logo } alt="" className="h-11 w-11" unoptimized />
+        <Image src={ service.logo } alt="" className="h-11 w-11 m-1" unoptimized />
       </div>
       <dl className="flex flex-auto flex-wrap gap-x-2">
         <dt className="sr-only">Service</dt>
         <dd className="w-full flex-none text-sm font-medium text-zinc-900 dark:text-zinc-100">
           { service.service }
         </dd>
-        <dt className="sr-only">Statistic</dt>
-        <dd className="text-xs text-zinc-500 dark:text-zinc-400">
+        <dt className="sr-only">Subtitle</dt>
+        <dd className="text-xs -mt-2 text-zinc-500 dark:text-zinc-400">
           { service.subtitle }
         </dd>
       </dl>
     </li>
   )
 }
+
+
 
 function Services() {
   let services: Array<Service> = [
@@ -115,8 +123,8 @@ function Services() {
     //   logo: logoUndrawGroupHangout,
     // },
     {
-      service: 'Fractional CISO and CIO',
-      subtitle: '13 years CISO and 3 years of CIO experience',
+      service: 'Fractional CISO',
+      subtitle: '13 years CISO experience',
       logo: logoUndrawGroupHangout,
     },
     {
@@ -147,10 +155,10 @@ function Services() {
           <Service key={ serviceIndex } service={ service } />
         ) ) }
       </ol>
-      <Button href="#" variant="secondary" className="group mt-6 w-full">
+      {/* <Button href="#" variant="secondary" className="group mt-6 w-full">
         Download CV
         <ArrowDownIcon className="h-4 w-4 stroke-zinc-400 transition group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" />
-      </Button>
+      </Button> */}
     </div>
   )
 }
@@ -267,7 +275,6 @@ function ArrowDownIcon( props: React.ComponentPropsWithoutRef<'svg'> ) {
     </svg>
   )
 }
-
 
 // Unused components which may be re-added
 // function Testimonial() {

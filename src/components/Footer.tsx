@@ -2,6 +2,8 @@ import Link from 'next/link'
 
 import { ContainerInner, ContainerOuter } from '@/components/Container'
 
+// TODO: Update links and nav
+
 function NavLink({
   href,
   children,
