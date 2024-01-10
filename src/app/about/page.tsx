@@ -12,8 +12,12 @@ import {
 } from '@/components/SocialIcons'
 import fullHeadshotImage from '@/images/photos/chadheadshot2.jpg'
 
-// TODO: Update content
+// TODO: Revise content
 
+const aboutHeader: string = "A little about me and what gets me up in the morning.";
+const aboutContentPara1: string = "With over two decades of experience in the technology and security space, I've spanned the experiences of speaking to public Board of Directors, and troubleshooting outages at midnight.  I've taught nearly a thousand students and spoken to audiences of over 100 technology leaders.  Whether it is a boardroom, conference room, or datacenter, I have a singular passion: building and leading teams to solve complex problems.  I've been fortunate to have a career that has allowed me to do just that.  I've been a CISO, architect, developer, and engineer.  I've been a consultant, speaker, writer, and teacher. I've been a mentor, a coach, and a friend.";
+const aboutContentPara2: string = "I founded Bitfire Security in 2020 and invested my time where I loved - building the organization, putting together extraordinary teams, and delighting customers.  The practice grew... and grew.  Bitfire won \"Top 10 Security Assessment Company,\" spot in the same year it won \"Top 10 Managed Services Providers.\"  We had development, and AI-driven contracts. That seemed... off. Bitfire Security became too much and risked losing its identity - a small, boutique security firm that delivered exceptional results to hand-picked customers.  I spun off the managed services and AI practice into separate companies, Justikar and Bifire.ai respectively. Bitfire Security is now a security professional services firm, differentiated by offerings that pair security and non-security domain experts in a single engagement.  Named a \"Top 10 Security Assessment Company,\" Bitfire Security is capable of designing and delivering creative solutions that scale from small businesses to regulated Fortune 100 organizations.  Bitfire.ai is laser-focused on AI operations and governance for conversational AI (ChatGPT, Microsoft Copilot, etc), and Justikar is a managed service provider, offering managed IT and security services to small and midsize enterprises with discerning security considerations.";
+const aboutContentPara3: string = "Having partners on Bitfire Security, Bitfire.ai, and Justikar has allowed me to expand what is, by far, my favorite role - the CISO.  More specifically the Fractional CISO (vCISO). I get to work with a small number of companies, gaining an intimate knowledge of their people, vertical, and processes.  I get to say 'spend less on this' or 'you absolutely CAN do that, here's how.' I get to be a trusted partner, a mentor, and a coach.";
 
 function SocialLink( {
   className,
@@ -77,14 +81,12 @@ export default function About() {
         </div>
         <div className="lg:order-first lg:row-span-2">
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-            Duis nisi non consectetur exercitation sit amet.
+            { aboutHeader }
           </h1>
           <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
-            <p>Ullamco qui id enim aliquip duis aute ipsum irure velit. Quis voluptate exercitation occaecat aute fugiat non incididunt laborum. Nostrud ea non laboris laboris cupidatat aliqua laboris sunt enim officia deserunt deserunt. Consectetur excepteur adipisicing dolor officia. Fugiat in ut proident elit sint et tempor enim fugiat.
-            </p>
-            <p>Quis cupidatat ipsum dolor aliqua ad fugiat cupidatat adipisicing nulla. Anim cillum ullamco culpa consequat commodo fugiat. Veniam irure cupidatat ea veniam sunt qui. Fugiat commodo aliqua ex culpa cillum irure minim voluptate eu officia culpa ex. Minim commodo consectetur enim et excepteur id dolor sint ipsum excepteur et qui. Dolore et occaecat laboris sunt reprehenderit voluptate fugiat sint et qui. Laboris aliquip do est ea Lorem voluptate fugiat exercitation non officia mollit incididunt occaecat aliqua.
-            </p>
-            <p>Et nisi laborum cupidatat aliquip adipisicing reprehenderit. Labore amet mollit officia pariatur incididunt. Reprehenderit cillum magna enim sint Lorem quis enim tempor non aute incididunt. Pariatur nulla dolor in tempor nulla ullamco. Pariatur veniam deserunt in anim excepteur enim cupidatat.
+            <p>{ aboutContentPara1 }</p>
+            <p>{aboutContentPara2}</p>
+            <p>{aboutContentPara3}
             </p>          </div>
         </div>
         <div className="lg:pl-20">

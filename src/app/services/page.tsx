@@ -3,15 +3,12 @@ import Image from 'next/image'
 
 import { Card } from '@/components/Card'
 import { SimpleLayout } from '@/components/SimpleLayout'
-import logoPlanetaria from '@/images/logos/planetaria.svg'
-import undrawAcceptTask from '@/images/logos/undraw_accept_tasks_re_09mv.svg'
-import undrawPairProgramming from '@/images/logos/undraw_pair_programming_re_or4x.svg'
-import undrawEngineeringTeam from '@/images/logos/undraw_engineering_team_a7n2.svg'
-import undrawFractionalCISO from '@/images/logos/undraw_adventure_map_hnin.svg'
-import undrawBitfireAI from '@/images/logos/undraw_robotics_kep0.svg'
-import undrawSpeaking from '@/images/logos/undraw_pitching_re_fpgk.svg'
-import undrawConsulting from '@/images/logos/undraw_group_hangout_re_4t8r.svg'
-import undrawServices from '@/images/logos/undraw_engineering_team.svg'
+import undrawAcceptTask from '@/images/icons/undraw_accept_tasks_re_09mv.svg'
+import undrawFractionalCISO from '@/images/icons/undraw_adventure_map_hnin.svg'
+import undrawBitfireAI from '@/images/icons/undraw_robotics_kep0.svg'
+import undrawSpeaking from '@/images/icons/undraw_pitching_re_fpgk.svg'
+import undrawConsulting from '@/images/icons/undraw_group_hangout_re_4t8r.svg'
+import undrawServices from '@/images/icons/undraw_engineering_team.svg'
 
 // TODO: Fix coloring so icons are more visible (roadmap)
 // TODO: Add data sheet for Fractional CISO and a "more" pop up with additional details (roadmap)

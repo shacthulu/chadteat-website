@@ -12,16 +12,16 @@ import {
   TwitterIcon,
   IconAcm
 } from '@/components/SocialIcons'
-import logoUndrawPieGraph from '@/images/logos/undraw_pie_graph_re_fvol.svg'
-import logoUndrawTeaching from '@/images/logos/undraw_teaching_re_g7e3.svg'
-import logoUndrawGroupHangout from '@/images/logos/undraw_group_hangout_re_4t8r.svg'
-import logoUndrawAcceptTasks from '@/images/logos/undraw_accept_tasks_re_09mv.svg'
+import logoUndrawPieGraph from '@/images/icons/undraw_pie_graph_re_fvol.svg'
+import logoUndrawTeaching from '@/images/icons/undraw_teaching_re_g7e3.svg'
+import logoUndrawGroupHangout from '@/images/icons/undraw_group_hangout_re_4t8r.svg'
+import logoUndrawAcceptTasks from '@/images/icons/undraw_accept_tasks_re_09mv.svg'
 
 import { type ArticleWithSlug, getAllArticles } from '@/lib/articles'
 import { formatDate } from '@/lib/formatDate'
 
 // TODO: Revisit icons.  I like the actual icons but their size makes it difficult to discern. In the short-midterm homogenize them with the services representation (roadmap)
-
+// TODO: Fix spacing in services.  The space between wrapped text is too large.  The first fractional CISO subtitle is further away than the others.
 const intro: String = "Explore this site if you're interested in working with me personally for executive advisory, fractional CISO, CIO, and speaking engagements. Follow me on Twitter, LinkedIN or subscribe to my minimilist email updates if you are here for the articles and thousands of dollars worth of consulting resources I regularly release."
 
 const heading: String = "Chad Teat: CISO, Professor, Speaker, Entrepreneur."
@@ -62,7 +62,7 @@ function Contact() {
         <span className="ml-3">Ready to Talk?</span>
       </h2>
       <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
-        Send me a message letting me know how you&apos;d like to work together.
+        Enough about me, I&apos;d love to hear about you!
       </p>
       <div className="mt-3">
         <EmailButton />
@@ -81,7 +81,7 @@ function EmailButton () {
 
   return (
     <a href={ mailtoLink } className="inline-flex items-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50" >
-      Send Email
+      Contact Me
     </a>
   );
 };
