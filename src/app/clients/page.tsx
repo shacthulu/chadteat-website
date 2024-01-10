@@ -171,7 +171,7 @@ const clientCompanies = [
     name: '11 More',
     description:
       'Omitted for privacy',
-    link: { href: 'https://www.disa.mil', label: 'disa.mil', icon: 'external' },
+    link: { href: '', label: '', icon: 'external' },
     logo: logoAndMore,
   },
 ]
@@ -209,7 +209,7 @@ const mentorCompanies = [
     name: '5+ More',
     description:
       'Omitted for privacy',
-    link: { href: 'https://www.disa.mil', label: 'disa.mil', icon: 'external' },
+    link: { href: '#', label: '', icon: 'external' },
     logo: logoAndMore,
   },
 ]
@@ -337,8 +337,8 @@ export default function Uses() {
             <Card.Description>{ service.description }</Card.Description>
             <div className="mt-4"/>
             <p className="relative z-10 flex text-sm font-medium mt-auto text-zinc-400 transition group-hover:text-teal-500 dark:text-zinc-200">
-              <LinkIcon className="h-6 w-6 flex-none" />
-              <span className="ml-2">{service.link.label}</span>
+              { service.link.label != '' ? <><LinkIcon className="h-6 w-6 flex-none" />
+              <span className="ml-2">{service.link.label}</span> </>: null}
             </p>
           </Card>
         ))}
@@ -365,8 +365,8 @@ export default function Uses() {
             <Card.Description>{ service.description }</Card.Description>
             <div className="mt-4"/>
             <p className="relative z-10 flex text-sm font-medium mt-auto text-zinc-400 transition group-hover:text-teal-500 dark:text-zinc-200">
-              <LinkIcon className="h-6 w-6 flex-none" />
-              <span className="ml-2">{service.link.label}</span>
+            { service.link.label != '' ? <><LinkIcon className="h-6 w-6 flex-none" />
+              <span className="ml-2">{service.link.label}</span> </>: null}
             </p>
           </Card>
         ))}
