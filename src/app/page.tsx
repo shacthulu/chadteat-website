@@ -20,7 +20,7 @@ import logoUndrawAcceptTasks from '@/images/logos/undraw_accept_tasks_re_09mv.sv
 import { type ArticleWithSlug, getAllArticles } from '@/lib/articles'
 import { formatDate } from '@/lib/formatDate'
 
-// TODO: Revisit icons.  I like the actual icons but their size makes it difficult to discern.  Good enough for now.
+// TODO: Revisit icons.  I like the actual icons but their size makes it difficult to discern. In the short-midterm homogenize them with the services representation (roadmap)
 
 const intro: String = "Explore this site if you're interested in working with me personally for executive advisory, fractional CISO, CIO, and speaking engagements. Follow me on Twitter, LinkedIN or subscribe to my minimilist email updates if you are here for the articles and thousands of dollars worth of consulting resources I regularly release."
 

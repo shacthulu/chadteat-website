@@ -4,9 +4,17 @@ import Image from 'next/image'
 import { Card } from '@/components/Card'
 import { SimpleLayout } from '@/components/SimpleLayout'
 import logoPlanetaria from '@/images/logos/planetaria.svg'
+import undrawAcceptTask from '@/images/logos/undraw_accept_tasks_re_09mv.svg'
+import undrawPairProgramming from '@/images/logos/undraw_pair_programming_re_or4x.svg'
+import undrawEngineeringTeam from '@/images/logos/undraw_engineering_team_a7n2.svg'
+import undrawFractionalCISO from '@/images/logos/undraw_adventure_map_hnin.svg'
+import undrawBitfireAI from '@/images/logos/undraw_robotics_kep0.svg'
+import undrawSpeaking from '@/images/logos/undraw_pitching_re_fpgk.svg'
+import undrawConsulting from '@/images/logos/undraw_group_hangout_re_4t8r.svg'
+import undrawServices from '@/images/logos/undraw_engineering_team.svg'
 
-// TODO: Update icons
-// TODO: Add data sheet for Fractional CISO and a "more" pop up with additional details
+// TODO: Fix coloring so icons are more visible (roadmap)
+// TODO: Add data sheet for Fractional CISO and a "more" pop up with additional details (roadmap)
 // TODO: Add email and mailto for consulting, speaking, and fractional CISO
 // TODO: Update links to bitfire.ai, bitfiersecurity, justikar
 
@@ -16,42 +24,42 @@ const services = [
     description:
       'The next generation of security is here and it\'s not technologyl. Seasoned information risk management professionals, accelerating your business and making smart investments. All companies need a CISO.  Most only need a fraction of that CISO.  Our partnership will provide operational and strategic governance based on a nuanced understanding of your business, technology, and threat landscape.',
     link: { href: 'https://www.hp.com', label: 'hp.com', icon: ArrowTopRightIcon},
-    logo: logoPlanetaria,
+    logo: undrawFractionalCISO,
   },
   {
     name: 'Consulting',
     description:
       'Bitfire Security provides most of your security and IT consulting needs. Sometimes you have a less-defined need and want a frank conversation.  Whether strategy, leadership, culture or technical, I\'m here to help.  Feel free to contact me directly.',
     link: { href: 'https://www.flooranddecor.com', label: 'flooranddecor.com', icon: EmailAtIcon },
-    logo: logoPlanetaria,
+    logo: undrawConsulting,
   },
   {
     name: 'Speaking',
     description:
       'I have a relaxed and direct style, capable of engaging executive, entry-level and non-technical audiences. I have an extended skillset with are ad hoc conversation, and on-the-fly Q&A; perfect for panels, interviews, and highly-interactive sessions. Visuals and slides are optional and used for visualization and engagement.',
     link: { href: 'https://www.dla.mil', label: 'dla.mil', icon: EmailAtIcon },
-    logo: logoPlanetaria,
+    logo: undrawSpeaking,
   },
   {
     name: 'AI Operations and Governance (Bitfire.ai)',
     description:
       'Bitfire.ai is a unique offering, providing strategy and services for Large Language Models in the enterprise such as LLama, ChatGPT, and Microsoft Copilot.  The easy question is "should you adopt AI?" Bitfire.ai is here to bring the excitement of AI, by delivering the elegant solutions for strategy, engineering, operations and governance to make it a reality.',
     link: { href: 'https://www.homedepot.com', label: 'homedepot.com', icon: 'external' },
-    logo: logoPlanetaria,
+    logo: undrawBitfireAI,
   },
   {
     name: 'Professional Services (Bitfire Security)',
     description:
       'Bitfire Security is a security professional services firm, differentiated by offerings that pair security and non-security domain experts in a single engagement.  Named a "Top 10 Security Assessment Company," Bitfire Security is capable of designing and delivering creative solutions that scale from small businesses to regulated Fortune 100 organizations.',
     link: { href: 'https://www.homedepot.com', label: 'homedepot.com', type:'external' },
-    logo: logoPlanetaria,
+    logo: undrawAcceptTask,
   },
   {
     name: 'Managed IT Services (Justikar)',
     description:
       'Justikar is a managed service provider, offering managed IT and security services to small and midsize enterprises with discerning security considerations.  Having won "Top Managed Security Provider of the Year," Bitfire Security is spinning off its managed offerings in 2024 so Justikar may focus on providing unmatched delivery while maintaining the security pedigree.',
     link: { href: 'https://www.homedepot.com', label: 'homedepot.com', icon: 'external' },
-    logo: logoPlanetaria,
+    logo: undrawServices,
   },
 ]
 
@@ -103,11 +111,11 @@ export default function Projects() {
       >
         {services.map((service) => (
           <Card as="li" key={service.name}>
-            <div className="relative z-10 flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
+            <div className="relative z-10 flex h-36 w-full items-center justify-center rounded-md bg-white shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
               <Image
                 src={service.logo}
                 alt=""
-                className="h-8 w-8"
+                className="h-28"
                 unoptimized
               />
             </div>
