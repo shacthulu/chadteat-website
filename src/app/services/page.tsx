@@ -15,47 +15,50 @@ import undrawServices from '@/images/icons/undraw_engineering_team.svg'
 // TODO: Add email and mailto for consulting, speaking, and fractional CISO
 // TODO: Update links to bitfire.ai, bitfiersecurity, justikar
 
+const to = "chad@chadteat.com";
+const subject = encodeURIComponent( "Partnership Inquiry" );
+
 const services = [
   {
     name: 'Fractional CISO (vCISO)',
     description:
-      'The next generation of security is here and it\'s not technologyl. Seasoned information risk management professionals, accelerating your business and making smart investments. All companies need a CISO.  Most only need a fraction of that CISO.  Our partnership will provide operational and strategic governance based on a nuanced understanding of your business, technology, and threat landscape.',
-    link: { href: 'https://www.hp.com', label: 'hp.com', icon: ArrowTopRightIcon},
+      'The next generation of security is here and it\'s not technology. Seasoned information risk management professionals, accelerating your business and making smart investments. All companies need a CISO, regardless of whether they have a CIO or de facto security leader.  Most only need a fraction of that CISO.  Our partnership will provide operational and strategic governance based on a nuanced understanding of your business, technology, and threat landscape.',
+    link: { href: `mailto:${ to }?subject=${ encodeURIComponent( "Fractional CISO Inquiry" ) }`, label: 'Contact', icon: ArrowTopRightIcon},
     logo: undrawFractionalCISO,
   },
   {
-    name: 'Consulting',
+    name: 'Advisory',
     description:
-      'Bitfire Security provides most of your security and IT consulting needs. Sometimes you have a less-defined need and want a frank conversation.  Whether strategy, leadership, culture or technical, I\'m here to help.  Feel free to contact me directly.',
-    link: { href: 'https://www.flooranddecor.com', label: 'flooranddecor.com', icon: EmailAtIcon },
+      'Often companies have a de facto security leader, but need a trusted advisor to help them navigate the complex world of information security.  Internal leaders often lack the time or appetite to handle the cognitive load of daily research, peer group meetings, vendor relationships, and staying up to date with legal-regulatory concerns.  I bare the cognitive burden so your leaders can spend their time where it best makes sense to your organization, while still providing the strategic value of a CISO. This is a great option for building internal personnel into CISOs, or companies that have a small security team and prefer to in-house operational and governance processes.',
+    link: { href: `mailto:${ to }?subject=${ encodeURIComponent( "Advisory Inquiry" ) }`, label: 'Contact', icon: EmailAtIcon },
     logo: undrawConsulting,
   },
   {
     name: 'Speaking',
     description:
-      'I have a relaxed and direct style, capable of engaging executive, entry-level and non-technical audiences. I have an extended skillset with are ad hoc conversation, and on-the-fly Q&A; perfect for panels, interviews, and highly-interactive sessions. Visuals and slides are optional and used for visualization and engagement.',
-    link: { href: 'https://www.dla.mil', label: 'dla.mil', icon: EmailAtIcon },
+      'Effective speakers engage their audiences and paint captivating pictures, visually or mentally. I have a relaxed and direct style, capable of engaging executive, entry-level and non-technical audiences. I avoid maxims and conventional knowledge, while using relatable analogies to draw attendees in.  I\'m unfailingly passionate and prefer venues that allow movement and have enough lighting for eye contact.  I have an extended skillset with ad hoc conversation, and on-the-fly Q&A; perfect for panels, interviews, and highly-interactive sessions.',
+    link: { href: `mailto:${ to }?subject=${ encodeURIComponent( "Speaking Inquiry" ) }`, label: 'Contact', icon: EmailAtIcon },
     logo: undrawSpeaking,
   },
   {
     name: 'AI Operations and Governance (Bitfire.ai)',
     description:
       'Bitfire.ai is a unique offering, providing strategy and services for Large Language Models in the enterprise such as LLama, ChatGPT, and Microsoft Copilot.  The easy question is "should you adopt AI?" Bitfire.ai is here to bring the excitement of AI, by delivering the elegant solutions for strategy, engineering, operations and governance to make it a reality.',
-    link: { href: 'https://www.homedepot.com', label: 'homedepot.com', icon: 'external' },
+    link: { href: 'https://www.bitfiresecurity.com', label: 'bitfire.ai', icon: 'external' },
     logo: undrawBitfireAI,
   },
   {
     name: 'Professional Services (Bitfire Security)',
     description:
       'Bitfire Security is a security professional services firm, differentiated by offerings that pair security and non-security domain experts in a single engagement.  Named a "Top 10 Security Assessment Company," Bitfire Security is capable of designing and delivering creative solutions that scale from small businesses to regulated Fortune 100 organizations.',
-    link: { href: 'https://www.homedepot.com', label: 'homedepot.com', type:'external' },
+    link: { href: 'https://www.bitfiresecurity.com', label: 'bitfiresecurity.com', type:'external' },
     logo: undrawAcceptTask,
   },
   {
     name: 'Managed IT Services (Justikar)',
     description:
       'Justikar is a managed service provider, offering managed IT and security services to small and midsize enterprises with discerning security considerations.  Having won "Top Managed Security Provider of the Year," Bitfire Security is spinning off its managed offerings in 2024 so Justikar may focus on providing unmatched delivery while maintaining the security pedigree.',
-    link: { href: 'https://www.homedepot.com', label: 'homedepot.com', icon: 'external' },
+    link: { href: 'https://www.bitfiresecurity.com', label: 'justikar.com', icon: 'external' },
     logo: undrawServices,
   },
 ]
@@ -122,8 +125,8 @@ export default function Projects() {
             <Card.Description>{ service.description }</Card.Description>
             <div className="mt-4"/>
             <p className="relative z-10 flex text-sm font-medium mt-auto text-zinc-400 transition group-hover:text-teal-500 dark:text-zinc-200">
-              <ArrowTopRightIcon className="h-6 w-6 flex-none" />
-              <span className="ml-2">{service.link.label}</span>
+            { service.link.label != '' ? <><LinkIcon className="h-6 w-6 flex-none" />
+<span className="ml-2">{service.link.label}</span> </>: null}
             </p>
           </Card>
         ))}
@@ -131,3 +134,9 @@ export default function Projects() {
     </SimpleLayout>
   )
 }
+
+// { service.link.label != '' ? <><LinkIcon className="h-6 w-6 flex-none" />
+// <span className="ml-2">{service.link.label}</span> </>: null}
+// </p>
+// </Card>
+// ))}

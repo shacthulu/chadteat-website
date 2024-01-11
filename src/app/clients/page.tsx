@@ -171,7 +171,7 @@ const clientCompanies = [
     name: '11 More',
     description:
       'Omitted for privacy',
-    link: { href: '', label: '', icon: 'external' },
+    link: { href: '#', label: '', icon: 'external' },
     logo: logoAndMore,
   },
 ]
@@ -277,14 +277,14 @@ function RoleSection({
 // }
 
 export const metadata : Metadata = {
-  title: 'Experience',
+  title: 'Clients',
   description: "Great companies I've worked with.",
 }
 
 export default function Uses() {
   return (
 <SimpleLayout
-  title="Great companies I've worked with"
+  title="Great companies I've worked with."
   intro="You should expect your partners to know the industry as a practitioner, not just a consultant.  My industry experience is listed first as, in those organizations, I sat in your seat, working for the company.  In the next section you'll see the organizations that trusted me to identify and solve the complex challenges of a modern business.  Security is a journey and, in the final section, you'll find the companies where I've mentored or advised leaders on a long-term basis."
 >
   <div className="space-y-20">
