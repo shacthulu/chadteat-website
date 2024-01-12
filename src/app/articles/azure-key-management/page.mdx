@@ -4,7 +4,7 @@ import Image from 'next/image'
 export const article = {
   author: 'Chad Teat',
   date: '2022-12-14',
-  title: 'Expose Secrets in your Code like a Pro in Node.js',
+  title: 'Hold onto Your Breaches: Three Lines of Code to Prevent Leaking Your Secrets',
   description:
 ' Learn how to securely manage keys, passwords, and certificates in .NET and Node.js applications using Azure Key Vault. This guide offers comprehensive insights into secret management and application security.'}
 
@@ -15,26 +15,29 @@ export const metadata = {
 
 export default (props) => <ArticleLayout article={article} {...props} />
 
-Today, we're diving into the world of secure application development, specifically focusing on the mastery of handling secrets like a pro. Publishing your code, even internally, is like inviting a bunch of folks over for a party. This guide was adapted from a client engagement thus we'll be using the original stack, .NET and Azure Key Vault. The concepts map one-to-one with nearly any language or secret management service.
+Uber, Amazon, and countless organizations were breached by not handling secrets in code. Yes, even administrative scripts like Powershell and batch. Today, we're diving into the world of securing your secrets, specifically focusing on the most immediately actionable secrets - connection strings and passwords. This guide was adapted from a client engagement so, first, this is directly actionable and second thus we'll be using the original stack, .NET and Azure Key Vault. The concepts map one-to-one with nearly any language or secret management service.
 
 ## Introduction
-For admins, analysts, and developers alike, everything fun we do requires secrets -- passwords, keys, certificates, and other sensitive information. Conceptually, secrets management is like using a password manager. Store everything centrally, lock it down, then access the secrets on-demand when you need them.  The secret management system handles all the security and access control, and our code simply requests the secret when it needs it.  This may sound intimidating but secrets management has come a long way in usability.  In the next 5-10 minutes you'll be slinging secrets and gain auditing, role-based access control, compliance, and lifecycle management *for free*.
+For admins, analysts, and developers alike, everything fun we do requires secrets -- passwords, keys, certificates, and other sensitive information. Conceptually, secrets management is like using a password manager for your apps, scripts, and containers. Store all your sensitive info centrally, lock the central secret store down, then access the secret only when neeced.  You may initially be concerned with this central store -- yes it's a risk.  However, we do the same everywhere.  We make sensitive network segments, centralizing PCI systems and others.  This may sound intimidating but secrets management has come a long way in usability.  Secrets management, traditionally, has been very "dev-ops-ish" but today it's accessible to admins and developers alike.  In the next 5-10 minutes you'll be slinging secrets and gain auditing, role-based access control, compliance, and lifecycle management *for free*.
 
 ## The need for secrets management
-In an unscientific estimate, Bitfire Security finds exposed secrets in 2/3rds of our assessments. You can always count on finding some juicy passwords, connection strings, and keys in the most mundane places.  Powershell scripts, spreadsheets, Sharepoint, source code and, once, as the wallpaper of an admin's PC.  For the regulated among us, *auditors will absolutely eat you alive.* 
+In an unscientific estimate, I find exposed secrets in 2/3rds of assessments. You can always count on finding some juicy passwords, connection strings, and keys in the most mundane places.  Powershell scripts, spreadsheets, Sharepoint, source code and, once, as the wallpaper of an admin's PC.  For the regulated among us, *auditors will absolutely eat you alive.* 
 
 Fortunately, this is such a pervasive problem, all the major players have competed to lower the difficulty and cost of secrets management.  Lifecycle management, auditing, role-based access control, and compliance are all built-in and dead simple.
 
 ## Prerequisites
 
+If you're coming to this article without experience in .NET, Azure, or Powershell don't worry. Here's what you'll need to get started:
+
 - An active Azure subscription.  This can be [setup for free](https://azure.microsoft.com/en-us/free/)
 - The [Azure CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli)
 - The [.NET Core SDK](https://dotnet.microsoft.com/download)
-- 
+
+We're trying to stick with "official" tools and libraries.  There are a lot of third-party but, as always, you're taking a risk with security and support.
 
 ## Preparing the environment
 
-Open a command shell and create a new directory for your project.  We'll be using the .NET CLI to create a new console application.
+Open a command shell and create a new directory for your project. Powershell, the Azure CLI, and .NET are cross-platform so you're in good shape whatever OS you use. If you're using Linux, you can use Bash or Powershell Core.
 
 ```bash
 mkdir secrets-demo
@@ -43,15 +46,14 @@ dotnet new console
 ```
 
 Now add the official Azure Key Vault package to the environment
+
 ```bash
 dotnet add package Azure.Security.KeyVault.Secrets
 ```
 
-Now we're ready to start getting wild with secrets!
-
 ## Getting access to the key vault
 
-First, we need to create a key vault in Azure.  This can be done through the Azure portal or using the Azure CLI.  We'll use the CLI for this example.
+First, we need to create a key vault in Azure. This can be done through the Azure portal or using the Azure CLI. I don't like making people chase through a dozen screens so we'll use copy+paste-able shell code. Using scripts and the CLI is also a great way to make sure you and your team stay on the same page, and it's a great way to automate your infrastructure.
 
 ```bash
 az login
@@ -59,3 +61,5 @@ az account set --subscription <your-subscription-id>
 az group create --name secrets-demo --location eastus
 az keyvault create --name secrets-demo --resource-group secrets-demo --location eastus
 ```
+
+Now we're ready to get wild with secrets!

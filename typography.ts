@@ -79,6 +79,12 @@ export default function typographyStyles({ theme }: PluginUtils) {
           marginBottom: theme('spacing.7'),
         },
 
+        // Base MDX Overrides
+        '.mdx-content p': {
+          marginTop: theme('spacing.1'),
+          marginBottom: theme('spacing.1'),
+        },
+
         // Headings
         'h2, h3': {
           color: 'var(--tw-prose-headings)',
@@ -98,6 +104,13 @@ export default function typographyStyles({ theme }: PluginUtils) {
         },
         ':is(h2, h3) + *': {
           marginTop: 0,
+        },
+
+        // Header MDX Overrides
+        '.mdx-content h2': {
+          marginTop: theme('spacing.10'),
+          marginBottom: theme('spacing.5'),
+          fontSize: theme('fontSize.2xl')[0],
         },
 
         // Images
@@ -193,6 +206,44 @@ export default function typographyStyles({ theme }: PluginUtils) {
           marginBottom: theme('spacing.3'),
         },
 
+        // MDX Lists Overrides
+        '.mdx-content ul': {
+          listStyleType: 'disc',
+          marginTop: theme('spacing.1'), // Add this line
+          marginBottom: theme('spacing.1'), // Add this line
+        },
+        '.mdx-content ol': {
+          listStyleType: 'decimal',
+          marginTop: theme('spacing.3'), // Add this line
+          marginBottom: theme('spacing.3'), // Add this line
+        },
+        '.mdx-content ul, .mdx-content ol': {
+          paddingLeft: theme('spacing.6'),
+        },
+        '.mdx-content li': {
+          marginTop: theme('spacing.1'), // reduced from 'spacing.6'
+          marginBottom: theme('spacing.1'), // reduced from 'spacing.6'
+          paddingLeft: theme('spacing[3.5]'),
+        },
+        '.mdx-content li::marker': {
+          fontSize: theme('fontSize.sm')[0],
+          fontWeight: theme('fontWeight.semibold'),
+        },
+        '.mdx-content ol > li::marker': {
+          color: 'var(--tw-prose-counters)',
+        },
+        '.mdx-content ul > li::marker': {
+          color: 'var(--tw-prose-bullets)',
+        },
+        '.mdx-content li :is(ol, ul)': {
+          marginTop: theme('spacing.4'),
+          marginBottom: theme('spacing.4'),
+        },
+        '.mdx-content li :is(li, p)': {
+          marginTop: theme('spacing.3'),
+          marginBottom: theme('spacing.3'),
+        },
+
         // Code blocks
         pre: {
           color: 'var(--tw-prose-pre-code)',
@@ -204,8 +255,32 @@ export default function typographyStyles({ theme }: PluginUtils) {
           overflowX: 'auto',
           border: '1px solid',
           borderColor: 'var(--tw-prose-pre-border)',
+          marginTop: theme( 'spacing.5' ),
+          marginBottom: theme( 'spacing.5' ),
         },
         'pre code': {
+          display: 'inline',
+          color: 'inherit',
+          fontSize: 'inherit',
+          fontWeight: 'inherit',
+          backgroundColor: 'transparent',
+          borderRadius: 0,
+          padding: 0,
+        },
+
+        // Code blocks MDX Override
+        '.mdx-content pre': {
+          color: 'var(--tw-prose-pre-code)',
+          fontSize: theme('fontSize.sm')[0],
+          fontWeight: theme('fontWeight.medium'),
+          backgroundColor: 'var(--tw-prose-pre-bg)',
+          borderRadius: theme('borderRadius.md'),
+          padding: theme('spacing.6'),
+          overflowX: 'auto',
+          border: '1px solid',
+          borderColor: 'var(--tw-prose-pre-border)',
+        },
+        '.mdx-content pre code': {
           display: 'inline',
           color: 'inherit',
           fontSize: 'inherit',
