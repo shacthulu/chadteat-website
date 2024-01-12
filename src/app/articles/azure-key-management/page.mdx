@@ -1,5 +1,6 @@
 import { ArticleLayout } from '@/components/ArticleLayout'
 import Image from 'next/image'
+import Alert from '@/components/MDXComponents/Alert'
 
 export const article = {
   author: 'Chad Teat',
@@ -16,6 +17,7 @@ export const metadata = {
 export default (props) => <ArticleLayout article={article} {...props} />
 
 Uber, Amazon, and countless organizations were breached by not handling secrets in code. Yes, even administrative scripts like Powershell and batch. Today, we're diving into the world of securing your secrets, specifically focusing on the most immediately actionable secrets - connection strings and passwords. This guide was adapted from a client engagement so, first, this is directly actionable and second thus we'll be using the original stack, .NET and Azure Key Vault. The concepts map one-to-one with nearly any language or secret management service.
+<Alert/>
 
 ## Introduction
 For admins, analysts, and developers alike, everything fun we do requires secrets -- passwords, keys, certificates, and other sensitive information. Conceptually, secrets management is like using a password manager for your apps, scripts, and containers. Store all your sensitive info centrally, lock the central secret store down, then access the secret only when neeced.  You may initially be concerned with this central store -- yes it's a risk.  However, we do the same everywhere.  We make sensitive network segments, centralizing PCI systems and others.  This may sound intimidating but secrets management has come a long way in usability.  Secrets management, traditionally, has been very "dev-ops-ish" but today it's accessible to admins and developers alike.  In the next 5-10 minutes you'll be slinging secrets and gain auditing, role-based access control, compliance, and lifecycle management *for free*.
@@ -39,7 +41,8 @@ We're trying to stick with "official" tools and libraries.  There are a lot of t
 
 Open a command shell and create a new directory for your project. Powershell, the Azure CLI, and .NET are cross-platform so you're in good shape whatever OS you use. If you're using Linux, you can use Bash or Powershell Core.
 
-```bash
+
+```batch
 mkdir secrets-demo
 cd secrets-demo
 dotnet new console
@@ -47,7 +50,7 @@ dotnet new console
 
 Now add the official Azure Key Vault package to the environment
 
-```bash
+```batch
 dotnet add package Azure.Security.KeyVault.Secrets
 ```
 
@@ -55,7 +58,7 @@ dotnet add package Azure.Security.KeyVault.Secrets
 
 First, we need to create a key vault in Azure. This can be done through the Azure portal or using the Azure CLI. I don't like making people chase through a dozen screens so we'll use copy+paste-able shell code. Using scripts and the CLI is also a great way to make sure you and your team stay on the same page, and it's a great way to automate your infrastructure.
 
-```bash
+```batch
 az login
 az account set --subscription <your-subscription-id>
 az group create --name secrets-demo --location eastus
