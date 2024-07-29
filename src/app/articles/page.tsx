@@ -37,7 +37,7 @@ function Article({ article }: { article: ArticleWithSlug }) {
 export const metadata: Metadata = {
   title: 'Articles',
   description:
-    'Lorem ipsum dolor.',
+    'Articles page.',
 }
 
 export default async function ArticlesIndex() {
