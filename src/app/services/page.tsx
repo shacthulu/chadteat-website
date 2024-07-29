@@ -22,44 +22,37 @@ const services = [
   {
     name: 'Fractional CISO (vCISO)',
     description:
-      'The next generation of security is here and it\'s not technology. Seasoned information risk management professionals, accelerating your business and making smart investments. All companies need a CISO, regardless of whether they have a CIO or de facto security leader.  Most only need a fraction of that CISO.  Our partnership will provide operational and strategic governance based on a nuanced understanding of your business, technology, and threat landscape.',
+      'The next generation of security is here and it\'s not technology. Seasoned information risk management professionals, accelerating your business and making smart investments. All organizations can be accelerated through strategic security.  Most don\'t need a full-time CISO.  A fractional CISO provides operational and strategic governance based on a nuanced understanding of your business, technology, and threat landscape.',
     link: { href: `mailto:${ to }?subject=${ encodeURIComponent( "Fractional CISO Inquiry" ) }`, label: 'Contact', icon: ArrowTopRightIcon},
     logo: undrawFractionalCISO,
   },
   {
     name: 'Advisory',
     description:
-      'Often companies have a de facto security leader, but need a trusted advisor to help them navigate the complex world of information security.  Internal leaders often lack the time or appetite to handle the cognitive load of daily research, peer group meetings, vendor relationships, and staying up to date with legal-regulatory concerns.  I bare the cognitive burden so your leaders can spend their time where it best makes sense to your organization, while still providing the strategic value of a CISO. This is a great option for building internal personnel into CISOs, or companies that have a small security team and prefer to in-house operational and governance processes.',
+      'Often companies have a security leader, but need a trusted advisor to help them navigate the complex world of information security.  Leaders lack the time or appetite to handle the cognitive load of daily research, peer groups, vendor relationships, and staying up to date with legal-regulatory concerns.  Advisory allows your leaders can spend time in and around the business, while still providing strategic leadership. Advisory builds internal personnel and empowers companies that prefer to insource operational and governance processes.',
     link: { href: `mailto:${ to }?subject=${ encodeURIComponent( "Advisory Inquiry" ) }`, label: 'Contact', icon: EmailAtIcon },
     logo: undrawConsulting,
   },
   {
     name: 'Speaking',
     description:
-      'Effective speakers engage their audiences and paint captivating pictures, visually or mentally. I have a relaxed and direct style, capable of engaging executive, entry-level and non-technical audiences. I avoid maxims and conventional knowledge, while using relatable analogies to draw attendees in.  I\'m unfailingly passionate and prefer venues that allow movement and have enough lighting for eye contact.  I have an extended skillset with ad hoc conversation, and on-the-fly Q&A; perfect for panels, interviews, and highly-interactive sessions.',
+      'Effective speakers engage their audiences and paint captivating pictures, visually or mentally. I have a relaxed and direct style, capable of engaging executive, entry-level and non-technical audiences. I\'m unfailingly passionate and prefer venues that allow movement and have enough lighting for eye contact.  I have an extended skillset with ad hoc conversation, and on-the-fly Q&A; perfect for panels, interviews, and highly-interactive sessions.',
     link: { href: `mailto:${ to }?subject=${ encodeURIComponent( "Speaking Inquiry" ) }`, label: 'Contact', icon: EmailAtIcon },
     logo: undrawSpeaking,
   },
   {
     name: 'AI Operations and Governance (Bitfire.ai)',
     description:
-      'Bitfire.ai is a unique offering, providing strategy and services for Large Language Models in the enterprise such as LLama, ChatGPT, and Microsoft Copilot.  The easy question is "should you adopt AI?" Bitfire.ai is here to bring the excitement of AI, by delivering the elegant solutions for strategy, engineering, operations and governance to make it a reality.',
-    link: { href: 'https://www.bitfiresecurity.com', label: 'bitfire.ai', icon: 'external' },
+      'Bitfire.ai is a unique offering, providing strategy and services for Large Language Models in the enterprise such as LLama, ChatGPT, Claude, and Microsoft Copilot.  Bitfire.ai is here to bring the excitement of AI, by delivering elegant solutions for strategy, engineering, operations and governance.',
+    link: { href: 'https://www.bitfire.ai', label: 'bitfire.ai', icon: 'external' },
     logo: undrawBitfireAI,
   },
   {
     name: 'Professional Services (Bitfire Security)',
     description:
-      'Bitfire Security is a security professional services firm, differentiated by offerings that pair security and non-security domain experts in a single engagement.  Named a "Top 10 Security Assessment Company," Bitfire Security is capable of designing and delivering creative solutions that scale from small businesses to regulated Fortune 100 organizations.',
+      'Bitfire Security is a professional services firm, differentiated by offerings that pair security and non-security domain experts in a single engagement.  Named a "Top 10 Security Assessment Company," Bitfire Security is capable of designing and delivering creative solutions that scale from small businesses to regulated Fortune 100 organizations.',
     link: { href: 'https://www.bitfiresecurity.com', label: 'bitfiresecurity.com', type:'external' },
     logo: undrawAcceptTask,
-  },
-  {
-    name: 'Managed IT Services (Justikar)',
-    description:
-      'Justikar is a managed service provider, offering managed IT and security services to small and midsize enterprises with discerning security considerations.  Having won "Top Managed Security Provider of the Year," Bitfire Security is spinning off its managed offerings in 2024 so Justikar may focus on providing unmatched delivery while maintaining the security pedigree.',
-    link: { href: 'https://www.bitfiresecurity.com', label: 'justikar.com', icon: 'external' },
-    logo: undrawServices,
   },
 ]
 

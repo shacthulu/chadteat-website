@@ -15,9 +15,11 @@ import fullHeadshotImage from '@/images/photos/chadheadshot2.jpg'
 // TODO: Revise content
 
 const aboutHeader: string = "The people and experiences that got me here.";
-const aboutContentPara1: string = "With two decades of experience in the technology and security space, I've spanned the experiences of Board meetings, and troubleshooting midnight outages.  Whether it is a boardroom, conference hall, or datacenter, I have a singular passion: building and leading teams to solve complex problems. I've been a CISO, architect, developer, and engineer.  I've been a consultant, speaker, mentor, and friend. ";
-const aboutContentPara2: string = "My corporate experience kicked off strong, including technical and leadership tenures at the Fortune 10 Big Tech Hewlett-Packard Enterprise Services, and retail giant The Home Depot.  Leaving the established programs behind I shifted focus to greenfield and quick-moving organizations.  During this time I hired over 100 security professionals, built award-winning security programs in 50,000 person companies, and led as CISO to take a small private retailer public in what was the most bombastic opening on wallstreet that year. "
-const aboutContentPara3: string = "I founded Bitfire Security in 2020 as a small, boutique security firm that delivered exceptional results to hand-picked customers.The practice grew... and grew. Bitfire won a \"Top 10 Security Assessment Company,\" spot in the same year it won \"Top 10 Managed Services Providers.\"  To retain Bitfire Security's identity, I split the portfolio and added partners. Bitfire.ai offers services for conversational AI. Justikar spun off to offer managed IT and security services to small and midsize enterprises.  Having partners on Bitfire Security, Bitfire.ai, and Justikar has allowed me to expand what is, by far, my favorite role - the CISO.  As a fractional CISO (vCISO) I get to work with a small number of companies, gaining an intimate knowledge of their people, vertical, and processes.  I get to be a trusted partner, enabler, advisor and coach.";
+const aboutContentPara1: string = "With two decades of experience in the technology and security space, I've spanned the experiences of Board meetings, and troubleshooting midnight outages. Whether it is a boardroom, conference hall, or datacenter, I have a singular passion: building and leading teams to solve complex problems. I've been a CISO, architect, developer, and engineer. I've been a consultant, speaker, mentor, and friend.";
+const aboutContentPara2: string = "My corporate journey began with valuable experiences at industry giants like Hewlett-Packard Enterprise Services and The Home Depot. These roles provided a strong foundation in both technical skills and leadership. Seeking new challenges, I transitioned to more agile, growth-oriented organizations. This shift allowed me to contribute to the development of robust security programs in large enterprises and guide a private retailer through a successful IPO. "
+const aboutContentPara3: string = "In 2020, I founded Bitfire Security, a boutique firm focused on delivering tailored security solutions to select clients. As the practice expanded, we diversified our offerings to meet evolving market needs. This growth led to the creation of Bitfire.ai, specializing in conversational AI services, and Bitfire Security's expansion into resourcing and GRC.";
+const aboutContentPara4: string = "These ventures have allowed me to embrace what I consider my most rewarding role: serving as a fractional CISO (vCISO). In this capacity, I have the privilege of partnering closely with a select group of companies, gaining deep insights into their unique challenges and opportunities. This role allows me to serve as a trusted advisor, enabler, and coach, helping organizations navigate the complex landscape of information security.";
+const aboutContentPara5: string = "Throughout this journey, my focus has remained constant: empowering teams, fostering innovation, and building resilient security programs that enable businesses to thrive in an ever-changing digital landscape.";
 
 function SocialLink( {
   className,
@@ -85,9 +87,11 @@ export default function About() {
           </h1>
           <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
             <p>{ aboutContentPara1 }</p>
-            <p>{aboutContentPara2}</p>
-            <p>{aboutContentPara3}
-            </p>          </div>
+            <p>{ aboutContentPara2 }</p>
+            <p>{ aboutContentPara3 }</p>
+            <p>{ aboutContentPara4 }</p>
+            <p>{ aboutContentPara5 }</p>
+          </div>
         </div>
         <div className="lg:pl-20">
           <ul role="list">
