@@ -14,6 +14,8 @@ export const metadata = {
   description: article.description,
 }
 
+export const dynamic = 'force-static';
+
 export default (props) => <ArticleLayout article={article} {...props} />
 
 Uber, Amazon, and countless organizations were breached by not handling secrets in code. Yes, even administrative scripts like Powershell and batch. Today, we're diving into the world of securing your secrets, specifically focusing on the most immediately actionable secrets - connection strings and passwords. This guide was adapted from a client engagement so, first, this is directly actionable and second thus we'll be using the original stack, .NET and Azure Key Vault. The concepts map one-to-one with nearly any language or secret management service.

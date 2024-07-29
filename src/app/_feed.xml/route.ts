@@ -2,8 +2,11 @@ import assert from 'assert'
 import * as cheerio from 'cheerio'
 import { Feed } from 'feed'
 
-export async function GET(req: Request) {
-  let siteUrl = process.env.NEXT_PUBLIC_SITE_URL
+export const dynamic = 'force-static'
+
+export async function GET( req: Request ) {
+  
+  let siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://chadteat.com'
 
   if (!siteUrl) {
     throw Error('Missing NEXT_PUBLIC_SITE_URL environment variable')
