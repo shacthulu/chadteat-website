@@ -37,7 +37,7 @@ Parts of this site are licensed under the [Tailwind UI license](https://tailwind
 - [] Landing Page -- Decide to use quotes from the hype sheet of GCISO, IQPMC, Gartner, etc. Maybe replace HBH with TSG CFO
 
 
-## Thoughs
+## Thoughts
 
 - Clients section.  In the experience area differentiate between "Industry" and "Consulting" with industry having Home Depot, HP, etc, specifying as a security leader architect and CISO on the side.  Consulting can include the HP clients -- DLA, NMCI, GFEBS, Express Scripts, GSA, Homeland Security, ICE.  Also can have a "Mentoring and Advisory" section that includes "People from" and include GCISO, Ismail, and Laura??
 - Affiliations section. (Current or prior -- "has been affiliated with")
