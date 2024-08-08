@@ -34,7 +34,7 @@ export function Footer() {
                 <NavLink href="/services">Services</NavLink>
                 <NavLink href="/publicity">Publicity</NavLink>
               </div>
-              <p className="text-sm text-zinc-400 dark:text-zinc-500">
+              <p className="text-sm text-zinc-600 dark:text-zinc-300">
                 &copy; {new Date().getFullYear()} Chad Teat. All rights
                 reserved.
               </p>

@@ -78,6 +78,7 @@ export default function About() {
               alt=""
               sizes="(min-width: 1024px) 32rem, 20rem"
               className="rounded-2xl bg-zinc-100 object-cover dark:bg-zinc-800"
+              unoptimized
             />
           </div>
         </div>
@@ -101,7 +102,7 @@ export default function About() {
             <SocialLink href="https://github.com/redconstellation" icon={ GitHubIcon } className="mt-4">
               Follow on GitHub
             </SocialLink>
-            <SocialLink href="www.linkedin.com/in/chadteat" icon={ LinkedInIcon } className="mt-4">
+            <SocialLink href="https://www.linkedin.com/in/chadteat" icon={ LinkedInIcon } className="mt-4">
               Follow on LinkedIn
             </SocialLink>
             <SocialLink href="https://dl.acm.org/profile/81481651312" icon={ IconAcm } className="mt-4">
