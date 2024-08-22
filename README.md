@@ -15,4 +15,4 @@ As this webpage is intended for personal use only, contributions are not accepte
 
 ## License
 
-Many components may be subject to the TailwindUI license
+Some components may be subject to the TailwindUI license
